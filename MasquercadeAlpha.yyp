@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "167c050a-0156-47d1-a95d-7742b5062be4",
+            "Value": {
+                "id": "d9dfb1cb-f273-421b-8e41-3e681e5aa4b3",
+                "resourcePath": "datafiles_yy\\masq.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "18a0ca65-3ece-4add-9382-c0920180c8b8",
             "Value": {
                 "id": "e74abbf1-e58a-42a7-8b84-4d281ad8a444",
