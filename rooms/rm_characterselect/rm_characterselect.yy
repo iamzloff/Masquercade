@@ -30,10 +30,37 @@
         "cefe92e3-6542-4e07-a61c-c68288145c25",
         "c4346163-775d-438d-8b88-083db3a2d25b",
         "d8a7fca0-a60e-48dc-978a-c09c84a4c600",
-        "b68ac646-e267-4fa1-b1b5-e449b8f24ede"
+        "b68ac646-e267-4fa1-b1b5-e449b8f24ede",
+        "bbc1a1c9-723f-4687-a946-6cb693863ee5"
     ],
     "IsDnD": false,
     "layers": [
+        {
+            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
+            "name": "Instances_1",
+            "id": "f6bc5852-07be-4621-ae5c-909679521ea7",
+            "depth": -700,
+            "grid_x": 32,
+            "grid_y": 32,
+            "hierarchyFrozen": false,
+            "hierarchyVisible": true,
+            "inheritLayerDepth": false,
+            "inheritLayerSettings": false,
+            "inheritSubLayers": false,
+            "inheritVisibility": false,
+            "instances": [
+{"name": "inst_367511ED","id": "bbc1a1c9-723f-4687-a946-6cb693863ee5","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_367511ED","objId": "a1f13f16-4bef-4ff4-88fd-8274ff340fc7","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 960,"y": 544}
+            ],
+            "layers": [
+
+            ],
+            "m_parentID": "00000000-0000-0000-0000-000000000000",
+            "m_serialiseFrozen": false,
+            "modelName": "GMRInstanceLayer",
+            "mvc": "1.0",
+            "userdefined_depth": false,
+            "visible": true
+        },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "PlayerRings",
