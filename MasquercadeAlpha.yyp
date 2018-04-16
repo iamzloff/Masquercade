@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "999227ae-2987-45d4-b382-8ee53a46d195",
+            "Value": {
+                "id": "f83fc79b-19cf-4da0-b97a-f6336e98374c",
+                "resourcePath": "rooms\\rm_macroselect\\rm_macroselect.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "9e2d8f5b-c99d-4dd4-8346-53a1dd08598a",
             "Value": {
                 "id": "14bcb20b-1562-4152-8952-00c1f82296a7",
@@ -794,7 +802,7 @@
             "Key": "a1f13f16-4bef-4ff4-88fd-8274ff340fc7",
             "Value": {
                 "id": "f7bc2db3-04c1-4833-bb32-b5374c0ae28e",
-                "resourcePath": "objects\\object54testt\\object54testt.yy",
+                "resourcePath": "objects\\obj_chain\\obj_chain.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -900,6 +908,14 @@
                 "id": "54dfb457-9bf8-435c-8a12-133ebee8e51b",
                 "resourcePath": "views\\b7474e18-4b4a-423b-9530-9d8c893257ac.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "b791c093-2a33-4b46-b0d1-64c32a94ce5d",
+            "Value": {
+                "id": "8a35ed30-ae88-4b5c-8c90-917b24ed4159",
+                "resourcePath": "objects\\obj_uniplayermonitor\\obj_uniplayermonitor.yy",
+                "resourceType": "GMObject"
             }
         },
         {
