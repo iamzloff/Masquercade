@@ -38,7 +38,7 @@
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Instances_1",
+            "name": "Chain",
             "id": "f6bc5852-07be-4621-ae5c-909679521ea7",
             "depth": -700,
             "grid_x": 32,
@@ -239,7 +239,7 @@
         },
         {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Backgrounds_1",
+            "name": "Backgrounds",
             "id": "4cb69f73-8c1c-4cec-85ff-23446e639e27",
             "animationFPS": 15,
             "animationSpeedType": "0",

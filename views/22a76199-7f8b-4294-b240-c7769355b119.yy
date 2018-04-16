@@ -11,8 +11,7 @@
         "abf0c9f1-c4f0-497d-8565-ba4fde53f853",
         "cb4e1649-7567-4224-b05c-c89fe453b66a",
         "dba59947-e9c5-444a-a1f9-4917adaffe96",
-        "e60ce938-35d4-4825-9067-057779e51d75",
-        "16734953-baf4-4c6f-9170-3221710f0936"
+        "e60ce938-35d4-4825-9067-057779e51d75"
     ],
     "filterType": "GMObject",
     "folderName": "Options Menu",

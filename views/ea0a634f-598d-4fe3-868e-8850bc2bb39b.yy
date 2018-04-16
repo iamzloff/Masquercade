@@ -9,10 +9,11 @@
         "5b794625-3541-4cc0-af68-27452b1195d8",
         "f6fdb136-407c-4944-840f-7aecf13f0254",
         "18a0ca65-3ece-4add-9382-c0920180c8b8",
-        "7d330f55-f8dc-4ea5-a7ff-8ddc6691e94e"
+        "7d330f55-f8dc-4ea5-a7ff-8ddc6691e94e",
+        "6e705454-605d-4d3a-baab-c9f79f38134d"
     ],
     "filterType": "GMSprite",
-    "folderName": "Main Text",
+    "folderName": "Main Menu",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

@@ -2,7 +2,7 @@
     "id": "16734953-baf4-4c6f-9170-3221710f0936",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_backtomenu",
+    "name": "obj_backbutton",
     "eventList": [
         {
             "id": "904443e7-e5d6-40c7-9830-082c7b32dc7c",
