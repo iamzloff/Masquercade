@@ -12,7 +12,8 @@
         "acece668-4680-45bc-8ea7-ad079cc5959b",
         "bd3d3100-6df9-4816-bfae-7fde1ea1b326",
         "c1af24bd-6977-41aa-bf45-7778da45f5dc",
-        "59dd59e6-855b-4819-aca1-9d921443f009"
+        "59dd59e6-855b-4819-aca1-9d921443f009",
+        "dea6d5f7-4bcd-4b02-b125-7cddb3182299"
     ],
     "filterType": "GMSprite",
     "folderName": "Character Select",

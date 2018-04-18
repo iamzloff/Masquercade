@@ -33,9 +33,24 @@ if position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c4bd)
 		{
 		obj_p1Fill.image_index = 5;
 		}
-//Character Selectection via A
+//Character Selection via A
 if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c1bd){
 	global.p1cn = 1;
+	global.pReady += 1;
+	instance_destroy();
+	}
+if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c2bd){
+	global.p1cn = 2;
+	global.pReady += 1;
+	instance_destroy();
+	}
+if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c3bd){
+	global.p1cn = 3;
+	global.pReady += 1;
+	instance_destroy();
+	}
+if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c4bd){
+	global.p1cn = 4;
 	global.pReady += 1;
 	instance_destroy();
 	}
