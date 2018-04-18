@@ -5,11 +5,13 @@ if (gamepad_button_check_pressed(0, gp_face1)) && (global.p1join = 1){
 if (gamepad_button_check_released(0, gp_face1)) && (global.p1join = 1){
 	image_index = 0;
 }
+
 //Cursor movement via analog stick//
 var haxis = gamepad_axis_value(0, gp_axislh);
 var vaxis = gamepad_axis_value(0, gp_axislv);
 direction = point_direction(0, 0, haxis, vaxis);
 speed = point_distance(0 ,0, haxis, vaxis) * 12;
+
 //Character Select Collision//
 if !position_meeting(obj_p1hand.x, obj_p1hand.y, obj_collisionparent)
 		{
@@ -31,3 +33,9 @@ if position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c4bd)
 		{
 		obj_p1Fill.image_index = 5;
 		}
+//Character Selectection via A
+if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_c1bd){
+	global.p1cn = 1;
+	global.pReady += 1;
+	instance_destroy();
+	}

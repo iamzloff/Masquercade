@@ -1,2 +1,11 @@
 global.pCount = 0
 global.pReady = 0
+global.allready = 0
+global.p1cn = 0
+global.p2cn = 0
+global.p3cn = 0
+global.p4cn = 0
+global.p5cn = 0
+global.p6cn = 0
+global.p7cn = 0
+global.p8cn = 0
