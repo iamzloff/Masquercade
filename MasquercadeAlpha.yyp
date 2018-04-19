@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "0a35a481-29d2-4284-8e9b-5da2fe0205a8",
+            "Value": {
+                "id": "f5e1d3c0-6b2f-4aab-9260-0bb8ce4aff7e",
+                "resourcePath": "objects\\obj_playercursorcollision\\obj_playercursorcollision.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0b8c28bf-574f-4e1d-b22d-8ba605011499",
             "Value": {
                 "id": "8edae141-52ed-4b62-b358-ba67882b6690",
@@ -242,7 +250,7 @@
             "Key": "2364aa14-6143-4289-a499-2ac01234d346",
             "Value": {
                 "id": "2d235a6a-f0e2-4c62-a1b6-8f9d2d81c711",
-                "resourcePath": "objects\\object58\\object58.yy",
+                "resourcePath": "objects\\obj_blackdrop\\obj_blackdrop.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -471,6 +479,14 @@
             }
         },
         {
+            "Key": "4e257005-2592-4212-82fa-9158f2a9d4ab",
+            "Value": {
+                "id": "4bc18f76-7c3d-41b2-8433-3763bbb65d9b",
+                "resourcePath": "sprites\\spr_msbook\\spr_msbook.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "506910f9-db5e-45f8-ad98-d851af9e0601",
             "Value": {
                 "id": "4445e8e6-a09b-4d73-8da0-f8888a1a0de7",
@@ -599,6 +615,22 @@
             }
         },
         {
+            "Key": "6256928e-0cba-4160-ae90-fa52f52ebcc7",
+            "Value": {
+                "id": "d5f02d59-70fb-489e-96c5-8db18e52e3bf",
+                "resourcePath": "views\\6256928e-0cba-4160-ae90-fa52f52ebcc7.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "6539918f-4d03-40b5-af56-d9383c403a29",
+            "Value": {
+                "id": "f02880ab-a87b-4262-9265-51087ce89751",
+                "resourcePath": "views\\6539918f-4d03-40b5-af56-d9383c403a29.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "65e644be-3bfc-441d-8bda-f06de9ec5d11",
             "Value": {
                 "id": "2b47b768-9e0b-4321-b6d7-e5ae7442a9a9",
@@ -612,6 +644,14 @@
                 "id": "bd56d977-14ee-446f-b7d5-09f33e59676a",
                 "resourcePath": "sprites\\spr_optionhead\\spr_optionhead.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6be9d9b5-e9ff-4ecc-a495-17623b0051c3",
+            "Value": {
+                "id": "d9830161-1c69-48d2-80d8-6b6e5b071f37",
+                "resourcePath": "objects\\obj_fruitasticscurry\\obj_fruitasticscurry.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -715,6 +755,14 @@
             "Value": {
                 "id": "dbe7fbec-a74b-4f55-92cf-a920ca1ee36c",
                 "resourcePath": "objects\\obj_p1Fill\\obj_p1Fill.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7de5d9da-f498-4ff1-8054-cd38730d7497",
+            "Value": {
+                "id": "d5f2ae94-047a-4d85-9aa9-78e7e70ab243",
+                "resourcePath": "objects\\obj_msbackdrop\\obj_msbackdrop.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -967,6 +1015,14 @@
             }
         },
         {
+            "Key": "bbdfc95c-ca87-4ccc-81e4-e39f110fbfef",
+            "Value": {
+                "id": "2370b6b7-4501-4407-b95e-77ef0514bc83",
+                "resourcePath": "sprites\\spr_fruitasticscurry\\spr_fruitasticscurry.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "bc4a8815-c73f-48b2-abba-cb0307ccff34",
             "Value": {
                 "id": "9ec3f632-20be-4640-91db-f8c77816e439",
@@ -988,6 +1044,14 @@
                 "id": "923f3cfd-d629-4c54-b389-c3a0a7ad59f2",
                 "resourcePath": "sprites\\sprite28\\sprite28.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "bec06810-2d7c-46d9-8f9e-b3809d36fe87",
+            "Value": {
+                "id": "8e24a1de-7633-4599-b509-ea819fb24bc9",
+                "resourcePath": "objects\\obj_macrocollisionparent\\obj_macrocollisionparent.yy",
+                "resourceType": "GMObject"
             }
         },
         {
