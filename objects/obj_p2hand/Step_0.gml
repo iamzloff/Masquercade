@@ -11,7 +11,7 @@ var vaxis = gamepad_axis_value(1, gp_axislv);
 direction = point_direction(0, 0, haxis, vaxis);
 speed = point_distance(0 ,0, haxis, vaxis) * 12;
 //Character Select Collision//
-if !position_meeting(obj_p2hand.x, obj_p2hand.y, obj_collisionparent)
+if !position_meeting(obj_p2hand.x, obj_p2hand.y, obj_charselCP)
 		{
 		obj_p2Fill.image_index = 1;
 		}

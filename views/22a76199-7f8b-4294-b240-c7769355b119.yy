@@ -14,7 +14,7 @@
         "e60ce938-35d4-4825-9067-057779e51d75"
     ],
     "filterType": "GMObject",
-    "folderName": "Options Menu",
+    "folderName": "Options",
     "isDefaultView": false,
     "localisedFolderName": ""
 }
