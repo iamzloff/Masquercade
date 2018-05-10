@@ -1,9 +1,23 @@
 //Cursor Image Change at press of A button//
-if (gamepad_button_check_pressed(0, gp_face1)){
+if (gamepad_button_check_pressed(0, gp_face1)) or (mouse_check_button_pressed(mb_left)){
 	image_index = 1;
 }
-if (gamepad_button_check_released(0, gp_face1)){
+if (gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(mb_left)){
 	image_index = 0;
+}
+
+// Cursor Movement Via Mouse
+MYCurrent = mouse_y;
+MXCurrent = mouse_x;
+MYLast = 0;
+MXLast = 0;
+if (MYCurrent != MYLast){
+		MYLast = MYCurrent;
+		obj_p1hand.y = MYLast;
+}
+if (MXCurrent != MXLast){
+		MXLast = MXCurrent;
+		obj_p1hand.x = MXLast;
 }
 
 //Cursor movement via analog stick//
@@ -59,35 +73,17 @@ if room==rm_characterselect{
 }
 
 if room==rm_menu{
-//A button detection for each room selection -- ONLY APPLIES IN MAIN MENU ROOM//
-	if (gamepad_button_check_pressed(0, gp_face1) && (obj_pl.image_index == 1))
-    {
-    room_goto(rm_characterselect);
-    }
-	if (gamepad_button_check_pressed(0, gp_face1) && (obj_en.image_index == 1))
-    {
-    room_goto(rm_encyclodexicon);
-    }
-	if (gamepad_button_check_pressed(0, gp_face1) && (obj_op.image_index == 1))
-    {
-    room_goto(rm_options);
-    }
-	if (gamepad_button_check_pressed(0, gp_face1) && (obj_ex.image_index == 1))
-    {
-    game_end();
-    }
-
 //Menu Option Selection via A -- ONLY APPLIES IN MAIN MENU ROOM//
-	if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_pl){
-	room_goto(rm_characterselect);
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_pl){
+	room_goto(rm_lobbies);
 	}
-	if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_en){
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_en){
 	room_goto(rm_encyclodexicon);
 	}
-	if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_op){
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_op){
 	room_goto(rm_options);
 	}
-	if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_ex){
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_ex){
 	game_end();
 	}
 	
@@ -153,7 +149,7 @@ if room==rm_options{
 		obj_optionsapply.image_index = 1;
 		}
 	//Options AA Left Arrow Interactivity -- ONLY APPLIES IN OPTIONS ROOM//
-	if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_leftarrow){
+	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_leftarrow){
 	switch(obj_aa.image_index){
 		case 0:
 		obj_aa.image_index = 3;
@@ -174,7 +170,7 @@ if room==rm_options{
 		}
 	}
 	//Options AA Right Arrow Interactivity -- ONLY APPLIES IN OPTIONS ROOM//
-	if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_rightarrow){
+	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_rightarrow){
 	switch(obj_aa.image_index){
 		case 0:
 		obj_aa.image_index = 1;
@@ -195,7 +191,7 @@ if room==rm_options{
 		}
 	}
 	//Options Apply Button --  ONLY APPLIES IN OPTIONS ROOM//
-	if gamepad_button_check_pressed(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_optionsapply){
+	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_optionsapply){
 		//Reset Video for Player//
 	window_set_fullscreen(global.fullscreen);
 	display_reset(global.antia, global.vsync);
@@ -207,7 +203,7 @@ if room==rm_options{
 	ini_close();
 	}
 	//Options Full Screen Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
-	if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_checkfullscreen){
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_checkfullscreen){
 	if(obj_checkfullscreen.image_index = 0){
 	obj_checkfullscreen.image_index = 1;
 	global.fullscreen = true;
@@ -217,8 +213,8 @@ if room==rm_options{
 	global.fullscreen = false;
 	}
 	}
-	//Options Full Screen Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
-	if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_checkvsync){
+	//Options VSync Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_checkvsync){
 	if(obj_checkvsync.image_index = 0){
 	obj_checkvsync.image_index = 1;
 	global.vsync = true;
@@ -228,4 +224,32 @@ if room==rm_options{
 	global.vsync = false;
 	}
 	}
+}
+if room==rm_lobbies{
+	//Lobbies Select Collision -- ONLY APPLIES IN LOBBIES ROOM//
+	if !position_meeting(obj_p1hand.x, obj_p1hand.y, obj_LobDirCon)
+		{
+		obj_LobDirCon.image_index = 0;
+		}
+	if !position_meeting(obj_p1hand.x, obj_p1hand.y, obj_LobCreate)
+		{
+		obj_LobCreate.image_index = 0;
+		}
+	if position_meeting(obj_p1hand.x, obj_p1hand.y, obj_LobDirCon)
+		{
+		obj_LobDirCon.image_index = 1;
+		}
+	if position_meeting(obj_p1hand.x, obj_p1hand.y, obj_LobCreate)
+		{
+		obj_LobCreate.image_index = 1;
+		}
+		
+	//Lobbies Select Interactivity-- ONLY APPLIES IN LOBBIES ROOM//	
+	// Create a new Server Instance //
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_p1hand.x, obj_p1hand.y, obj_LobCreate){
+	if (htme_serverStart(6510,8)) {
+    room_goto(rm_characterselect);
+	} else {
+    show_message("Could not start server! Check your network configuration!");
+	}}
 }
