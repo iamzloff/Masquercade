@@ -1,5 +1,5 @@
 {
-    "id": "f9450d97-bde4-49c0-b0d0-dc0f993fad05",
+    "id": "722fff63-f8db-4608-bc77-16a83e437381",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_serverAskPlayersToResync",

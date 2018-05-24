@@ -79,12 +79,12 @@ if (self.dbgstate = vk_f9) draw_set_colour(self.dbgcolor_a);
 draw_text(self.dbg_right-20,offs,string_hash_to_newline(str));
 if (self.dbgstate = vk_f9) draw_set_colour(self.dbgcolor);
 offs = offs + string_height(string_hash_to_newline(str));
-/*
-str = "TOOLKIT (F10) #========#";
+
+str = "MAPS AND LISTS (F10) #========#";
 if (self.dbgstate = vk_f10) draw_set_colour(self.dbgcolor_a);
-draw_text(self.dbg_right-20,offs,str);
+draw_text(self.dbg_right-20,offs,string_hash_to_newline(str));
 if (self.dbgstate = vk_f10) draw_set_colour(self.dbgcolor);
-offs = offs + string_height(str);*/
+offs = offs + string_height(string_hash_to_newline(str));
 
 if (!self.isServer) {
     str = "DISCONNECT (F11) #========#";
@@ -100,7 +100,7 @@ draw_text(self.dbg_right-20,offs,string_hash_to_newline(str));
 draw_set_halign(fa_left);
 
 if (self.dbgstate = vk_nokey) {
-    var headstr2 = "GMnet CORE#DEBUG OVERLAY#========#Welcome to the debug overlay.#To disable it, set self.debugoverlay to false#in htme_init.";
+    var headstr2 = "GMnet CORE#DEBUG OVERLAY#========#Welcome to the debug overlay.#To disable it, set self.debugoverlay to false#in htme_config.";
     draw_rectangle_colour(self.dbg_left,self.dbg_top,self.dbg_left+20+string_width(string_hash_to_newline(headstr2))+20,self.dbg_top+20+string_height(string_hash_to_newline(headstr2))+5,c_black,c_black,c_black,c_black,false);
     draw_text(self.dbg_left+20,self.dbg_top+20,string_hash_to_newline(headstr2))
 }

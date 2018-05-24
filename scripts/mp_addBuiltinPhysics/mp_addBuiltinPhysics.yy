@@ -1,5 +1,5 @@
 {
-    "id": "a29d6f20-b46e-4537-a1f0-b7a4f4c5bb06",
+    "id": "a968d6c2-afa2-49f5-855d-88ad1a691d4d",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "mp_addBuiltinPhysics",

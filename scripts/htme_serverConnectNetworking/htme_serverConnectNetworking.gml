@@ -24,10 +24,10 @@ var in_ip = ds_map_find_value(async_load, "ip");
 var in_buff = ds_map_find_value(async_load, "buffer");
 var in_id = ds_map_find_value(async_load, "id");
 var in_port = ds_map_find_value(async_load, "port");
-buffer_seek(in_buff, buffer_seek_start, 0);
 
 //SCENARIO: Client that is not yet on the players list connected.
 if (is_undefined(ds_map_find_value(self.playermap,in_ip+":"+string(in_port)))) {
+    buffer_seek(in_buff, buffer_seek_start, 0);
     //Read command
     switch buffer_read(in_buff, buffer_s8) {
         case htme_packet.CLIENT_REQUESTCONNECT:
@@ -43,9 +43,11 @@ if (is_undefined(ds_map_find_value(self.playermap,in_ip+":"+string(in_port)))) {
         case htme_packet.CLIENT_GREETINGS:
             var cversion = buffer_read(in_buff, buffer_u16);
             var cgamename = buffer_read(in_buff, buffer_string);
+            // Get currently connected clients
+            var numConnectedClients = ds_list_size(global.htme_object.playerlist);
             //Check if compatible
-            if (self.gamename != cgamename || cversion < self.version_mayor || cversion >= self.version_mayor+100) {
-                htme_debugger("htme_serverConnectNetworking",htme_debug.INFO,in_ip+":"+string(in_port)+" - Client kicked. Not compatible.");
+            if (self.gamename != cgamename || cversion < self.version_mayor || cversion >= self.version_mayor+100 || self.maxConnectingClients<=numConnectedClients) {
+                htme_debugger("htme_serverConnectNetworking",htme_debug.INFO,in_ip+":"+string(in_port)+" - Client kicked. Not compatible or max clients.");
                 //CONNECTION REFUSED
                 buffer_seek(self.buffer, buffer_seek_start, 0);
                 buffer_write(self.buffer, buffer_s8, htme_packet.SERVER_KICKREQ)

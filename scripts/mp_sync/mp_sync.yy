@@ -1,5 +1,5 @@
 {
-    "id": "af2f7348-d126-4032-b939-29892339a000",
+    "id": "b28cbb55-48b1-4b43-bebc-7d4fce6317f6",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "mp_sync",

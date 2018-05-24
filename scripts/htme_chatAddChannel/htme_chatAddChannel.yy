@@ -1,5 +1,5 @@
 {
-    "id": "a2328b39-682e-470b-ab2a-da59b5a53f66",
+    "id": "a8fdd18a-aefc-4ab1-ac19-300bd9a08409",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_chatAddChannel",

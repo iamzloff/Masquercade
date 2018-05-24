@@ -46,6 +46,13 @@ if (argument_count > 1) {
 }
 
 with (global.htme_object) {
+    // Clean list from ds maps
+    for (var i=0; i<ds_list_size(self.lanlobby); i+=1)
+    {
+        if ds_exists(self.lanlobby[| i],ds_type_map) {
+            ds_map_destroy(self.lanlobby[| i]);
+        }
+    }
     ds_list_destroy(self.lanlobby);
     self.lanlobby = ds_list_create();
     self.lanlobbyport = port;

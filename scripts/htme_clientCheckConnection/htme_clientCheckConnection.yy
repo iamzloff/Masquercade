@@ -1,5 +1,5 @@
 {
-    "id": "8be0e0d2-06b4-4668-b969-d61bc9d38dc1",
+    "id": "71bf88c4-0828-4f4c-9513-0785c434cee8",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_clientCheckConnection",

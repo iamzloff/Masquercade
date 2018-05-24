@@ -19,20 +19,70 @@
 **
 */
 
+// Handle offline mode
+htme_handle_offline_mode(true);
+
 //Run this script as the htme.
 with (global.htme_object) {
 
 var port = argument0;
 var maxclients = argument1;
 
+// Set max clients to engine
+self.maxConnectingClients = maxclients;
+
+// Start upnp (if not using udphp else udphp will start the upnp)
+if upnp_enabled and use_udphp=false
+{
+    // Create a upnp handler
+    if instance_number(obj_upnp)=0 instance_create(0,0,obj_upnp);
+    if instance_number(obj_upnp)>0
+    {
+        // Set port to setup
+        obj_upnp.port_to_set=port;
+        // Start the setup
+        with obj_upnp event_user(0);
+    }
+}
+
+// Start steamworks
+if steam_enabled
+{
+    // Create steam lobby
+    scr_steam_create_lobby(maxclients);
+}
+
 //Create the server socket
 htme_debugger("htme_serverStart",htme_debug.DEBUG,"STARTING SERVER");
-self.socketOrServer = network_create_socket_ext(network_socket_udp,port);
+switch (gmversionpick)
+{
+    // You maybe dont got network_create_socket_ext just add // in front of it
+    //case 1: self.socketOrServer = network_create_socket_ext(network_socket_udp,port); break;
+    case 2: self.socketOrServer = network_create_socket(network_socket_udp); break;
+    case 3: self.socketOrServer = network_create_server(network_socket_udp,port,maxclients); break;
+    default: htme_error_message_handler("Go to script: htme_serverStart and decomment the one you use!");  
+}
+
 self.port = port;
 
 //Check if server was created
 if(self.socketOrServer<0) {
     htme_debugger("htme_serverStart",htme_debug.ERROR,"Could not start Server! Return of network_create_server: "+string(self.socketOrServer));
+    //Create dummy variables for clean script, else it will crash
+    self.playermap = -1;
+    self.kickmap = -1;
+    self.playerrooms = -1;
+    self.serverTimeoutSend = -1;
+    self.serverTimeoutRecv = -1;
+    self.signedPackets = -1;
+    self.signedPacketsCategories = -1;
+    self.serverBackup = -1;
+    self.playerlist = -1;
+    self.grouplist = -1;
+    self.grouplist_local = -1;
+    self.globalsync = -1;
+    self.globalsync_datatypes = -1;
+    self.chatQueues = -1;
     htme_serverStop();
     return false;
 }
@@ -41,7 +91,7 @@ if(self.socketOrServer<0) {
 if (self.use_udphp) {
     htme_debugger("htme_serverStart",htme_debug.DEBUG,"LOADING GMnet PUNCH");
     self.udphp_playerlist = ds_list_create();
-    if(!script_execute(asset_get_index("udphp_createServer"),self.socketOrServer,self.buffer,self.udphp_playerlist)) {
+    if(!script_execute(asset_get_index("udphp_createServer"),self.socketOrServer,self.buffer,self.udphp_playerlist,port)) {
         //Error while starting udphp
         htme_debugger("htme_serverStart",htme_debug.ERROR,"Could not start GMnet PUNCH server instance! Check udphp log, increase log level if neccesary.");
         htme_serverStop();

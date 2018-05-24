@@ -1,5 +1,5 @@
-/// @description udphp_clientReadData(clientid)
-/// @param clientid
+/// @description udphp_clientReadData(client)
+/// @param client
 
 /*
 **  Description:
@@ -30,25 +30,22 @@
 **      udphp_clientReadData(clientid)
 **
 **  Arguments:
-**      clientid                      int
+**      client                      int
 **
 **  Returns:
 **      <nothing>
 **
 */
 
-var client_id = argument0;
+var client = argument0;
 
-if (!udphp_clientIsConnected(client_id)) {
-   udphp_handleerror(udphp_dbglvl.WARNING, udphp_dbgtarget.CLIENT, client_id, "ClientReadData failed: Client was not connected!");
+if (!udphp_clientIsConnected(client)) {
+   udphp_handleerror(udphp_dbglvl.WARNING, udphp_dbgtarget.CLIENT, client, "ClientReadData failed: Client was not connected!");
    exit;
 }
 
-var client_buffer = ds_map_find_value(global.udphp_clients_buffer,client_id);
-var client_udp = ds_map_find_value(global.udphp_clients_udp,client_id);
+buffer_seek(client.buffer, buffer_seek_start, 0);
 
-buffer_seek(client_buffer, buffer_seek_start, 0);
-
-buffer_write(client_buffer, buffer_s8, udphp_packet.DATAREQ);
-udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.CLIENT, client_id, "ClientReadData. Asking for Server data");
-network_send_udp(client_udp,udphp_clientGetServerIP(client_id),udphp_clientGetServerPort(client_id), client_buffer, buffer_tell(client_buffer) );
+buffer_write(client.buffer, buffer_s8, udphp_packet.DATAREQ);
+udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.CLIENT, client, "ClientReadData. Asking for Server data");
+network_send_udp(client.udp_socket,udphp_clientGetServerIP(client),udphp_clientGetServerPort(client), client.buffer, buffer_tell(client.buffer) );

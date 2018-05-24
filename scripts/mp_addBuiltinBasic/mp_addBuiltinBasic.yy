@@ -1,5 +1,5 @@
 {
-    "id": "24d6dfdf-e900-4dab-a041-b630f91a36f4",
+    "id": "74ec1561-7136-456b-91d4-98574fbe0003",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "mp_addBuiltinBasic",

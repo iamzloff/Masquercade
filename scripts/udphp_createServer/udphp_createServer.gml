@@ -1,7 +1,8 @@
-/// @description udphp_createServer(udp_server,buffer,player_list)
+/// @description udphp_createServer(udp_server,buffer,player_list,upnp port)
 /// @param udp_server
 /// @param buffer
 /// @param player_list
+/// @param upnp port
 
 /*
 **  Description:
@@ -18,6 +19,7 @@
 **      player_list       ds_list        A list that players will be saved to. Use this to
 **                                       get the connected clients. Entries can be parsed with
 **                                       udphp_playerListIP and udphp_playerListPort
+**      port              real           The port to use in upnp (if enabled)
 **
 **  Returns:
 **      true if server was created, false if an error occured
@@ -29,6 +31,7 @@
 var udp_server = argument0;
 var buffer = argument1;
 var player_list = argument2;
+var upnp_port = argument3;
 
 udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "Starting...");
 
@@ -81,6 +84,21 @@ global.udphp_server_data5 = "";
 global.udphp_server_data6 = "";
 global.udphp_server_data7 = "";
 global.udphp_server_data8 = "";
+
+// Start upnp (if not using udphp, htme will start the upnp)
+global.udphp_upnp_port=upnp_port;
+if global.udphp_upnp
+{
+    // Create a upnp handler
+    if instance_number(obj_upnp)=0 instance_create(0,0,obj_upnp);
+    if instance_number(obj_upnp)>0
+    {
+        // Set port to setup
+        obj_upnp.port_to_set=upnp_port;
+        // Start the setup
+        with obj_upnp event_user(0);
+    }
+}
 
 udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "Started!");
 return true;

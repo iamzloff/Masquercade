@@ -34,6 +34,7 @@ if (!self.isServer && self.playerhash == "") {
 /**RETRIEVE INFORMATION**/
 var inst_hash = group[? "instancehash"];
 var inst = group[? "instance"];
+var inst_player = noone;
 if (instance_exists(inst)) {
     var inst_groups = (inst).htme_mp_groups;
     var inst_object = (inst).htme_mp_object;
@@ -41,20 +42,21 @@ if (instance_exists(inst)) {
     var inst_stayAlive =  (inst).htme_mp_stayAlive;
 } else if (self.isServer) {
     var backupEntry = ds_map_find_value(self.serverBackup,inst_hash);
+    if is_undefined(backupEntry) backupEntry=-4;
     if (ds_exists(backupEntry,ds_type_map)) {
         var inst_groups = backupEntry[? "groups"];
         var inst_object = backupEntry[? "object"];
         var inst_player = backupEntry[? "player"];      
         var inst_stayAlive = backupEntry[? "stayAlive"];
     } else {
-        if (is_undefined(inst_hash) || is_undefined(group[? name])) {
+        if (is_undefined(inst_hash) || is_undefined(group[? "name"])) {
             htme_debugger("htme_syncSingleVarGroup",htme_debug.WARNING,"CORRUPTED VARGROUP! CONTENTS: "+json_encode(group));
         } else {
             htme_debugger("htme_syncSingleVarGroup",htme_debug.WARNING,"Could not sync var-group "+group[? "name"]+" of instance "+inst_hash+". MISSING BACKUP ENTRY!");
         }
     }
 } else {
-    if (is_undefined(inst_hash) || is_undefined(group[? name])) {
+    if (is_undefined(inst_hash) || is_undefined(group[? "name"])) {
         htme_debugger("htme_syncSingleVarGroup",htme_debug.WARNING,"CORRUPTED VARGROUP! CONTENTS: "+json_encode(group));
     } else {
         htme_debugger("htme_syncSingleVarGroup",htme_debug.WARNING,"Could not sync var-group "+group[? "name"]+" of instance "+inst_hash+". MISSING INSTANCE!");
@@ -103,11 +105,25 @@ buffer_write(self.buffer, buffer_string, inst_hash);
 //Write player
 buffer_write(self.buffer, buffer_string, inst_player);
 //Write room
-buffer_write(self.buffer, buffer_u16, inst_room);
+if use_string_as_id=false
+{
+    buffer_write(self.buffer, buffer_u16, inst_room);
+}
+else
+{
+    buffer_write(self.buffer, buffer_string, room_get_name(inst_room));
+}
 //Write groupname
 buffer_write(self.buffer, buffer_string, group[? "name"]);
 //Write object id
-buffer_write(self.buffer, buffer_u16, inst_object);
+if use_string_as_id=false
+{
+    buffer_write(self.buffer, buffer_u16, inst_object);
+}
+else
+{
+    buffer_write(self.buffer, buffer_string, object_get_name(inst_object));
+}
 //Write stayAlive
 buffer_write(self.buffer,buffer_bool, inst_stayAlive);
 //Write tolerance

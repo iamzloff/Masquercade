@@ -1,5 +1,5 @@
 {
-    "id": "bda3ddc1-a9e3-4d35-a4c9-24887ef7e798",
+    "id": "173906c9-15c0-4b76-9dc6-ca582d527217",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_globalGet",

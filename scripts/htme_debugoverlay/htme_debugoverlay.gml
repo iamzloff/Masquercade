@@ -43,10 +43,10 @@ if (string_copy(self.gamename,0,13) == "gmnet_engine_") {
     draw_text(self.dbg_right-20,self.dbg_top+50,string_hash_to_newline(str));
     draw_set_halign(fa_left);
     if (keyboard_check_pressed(vk_f10)) {
-        show_message(@"Warning! 
+        htme_error_message_handler(@"Warning! 
 You are using the default gamename string! 
 If you are testing the demo project or simply play arround with the engine, ignore this.
-Otherwise, when making your game, you need to change 'self.gamename' in 'htme_init'.
+Otherwise, when making your game, you need to change 'self.gamename' in 'htme_config'.
 This string is used to identify your game. It is meant to make sure different
 games can't connect to each other. If incompatible games would try to connect
 to each other that would result in data corruption and crashes.
@@ -102,6 +102,7 @@ switch (self.dbgstate) {
         htme_doSignedPackets(false);
     break;
     case vk_f10:
+        htme_doMapsAndLists();
     break;
     case vk_f9:
         htme_doSignedPackets(true);

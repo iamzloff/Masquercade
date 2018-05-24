@@ -1,5 +1,5 @@
 {
-    "id": "bd0a8d37-037b-47bc-ad27-22dd28e1f0ee",
+    "id": "72251c23-8903-4786-975a-2eaa58267bb1",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "mp_syncAsChatHandler",

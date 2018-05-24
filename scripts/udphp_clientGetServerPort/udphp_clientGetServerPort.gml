@@ -1,12 +1,12 @@
-/// @description udphp_clientGetServerPort(client_id)
-/// @param client_id
+/// @description udphp_clientGetServerPort(client)
+/// @param client
 
 /*
 **  Description:
 **      This will return the server port of this client and should only be used if the client is connected.
 **  
 **  Usage:
-**      udphp_clientGetServerPort(client_id)
+**      udphp_clientGetServerPort(client)
 **
 **  Arguments:
 **      client_id    real    ID of the client to check
@@ -16,6 +16,10 @@
 **
 */
 
-var client_id = argument0;
+var client = argument0;
 
-return ds_map_find_value(global.udphp_clients_serverport,client_id);
+if (!instance_exists(client)) {
+    return -1;
+}
+
+return client.server_port;

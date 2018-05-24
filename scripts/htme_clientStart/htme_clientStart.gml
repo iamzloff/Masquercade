@@ -35,6 +35,21 @@ self.socketOrServer = network_create_socket(network_socket_udp);
 if( self.socketOrServer<0 ){   
     //Stop client, when a socket could not be created
     htme_debugger("htme_clientStart",htme_debug.DEBUG,"Could not start Client! Return of network_create_socket: "+string(self.socketOrServer));
+    //Create dummy variables for clean script, else it will crash
+    self.playermap = -1;
+    self.kickmap = -1;
+    self.playerrooms = -1;
+    self.serverTimeoutSend = -1;
+    self.serverTimeoutRecv = -1;
+    self.signedPackets = -1;
+    self.signedPacketsCategories = -1;
+    self.serverBackup = -1;
+    self.playerlist = -1;
+    self.grouplist = -1;
+    self.grouplist_local = -1;
+    self.globalsync = -1;
+    self.globalsync_datatypes = -1;
+    self.chatQueues = -1;    
     htme_clientStop();
     return false;
 }
@@ -47,10 +62,10 @@ self.server_port = server_port;
 if (self.use_udphp) {
    htme_debugger("htme_clientStart",htme_debug.DEBUG,"LOADING UDPHP");
    self.udphp_client_id = script_execute(asset_get_index("udphp_createClient"),self.socketOrServer,server_ip,self.buffer,false,server_port);
-   if(self.udphp_client_id) {
+   if(self.udphp_client_id <= 0) {
         //Error while starting udphp
         htme_debugger("htme_clientStart",htme_debug.ERROR,"Could not start GMnet PUNCH client instance! Check GMnet PUNCH log, increase log level if neccesary.");
-        htme_serverStop();
+        htme_clientStop();
         return false;
     }
 }

@@ -26,7 +26,9 @@ var playerroom = ds_map_find_value(self.playerrooms,player_id);
 
 htme_debugger("htme_serverBroadcastRoomChange",htme_debug.DEBUG,"Someone changed room, telling other players to unsync the instances if needed");
 
-var mapToUse = self.globalInstances;
+var mapToUse=ds_map_create();
+ds_map_copy(mapToUse,self.globalInstances);
+
 var key= ds_map_find_first(mapToUse);
 //This will loop through all global instances
 for(var i=0; i<ds_map_size(mapToUse); i+=1) {
@@ -49,7 +51,11 @@ for(var i=0; i<ds_map_size(mapToUse); i+=1) {
                htme_debugger("htme_serverBroadcastRoomChange",htme_debug.DEBUG,"Tell "+inner_key+" to unsync "+inner_key);
                if (inner_key == "0:0") {
                   //Server: 
-                  with inst {instance_destroy();}
+                  with inst {
+                    // Clean mp_sync maps
+                    htme_clean_mp_sync();
+                    instance_destroy();
+                  }
                } else {
                  //Client: unsync this instance
                  htme_serverBroadcastUnsync(key,inner_key);
@@ -62,3 +68,6 @@ for(var i=0; i<ds_map_size(mapToUse); i+=1) {
 }
 
 htme_forceSyncLocalInstances(phash);
+
+// Clean
+ds_map_destroy(mapToUse);

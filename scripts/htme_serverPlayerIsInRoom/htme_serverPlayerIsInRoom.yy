@@ -1,5 +1,5 @@
 {
-    "id": "69ee5cc3-7217-49be-83a3-c8b77e1fc796",
+    "id": "2dce5e0c-5e25-420d-ab93-16b8b1106115",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_serverPlayerIsInRoom",

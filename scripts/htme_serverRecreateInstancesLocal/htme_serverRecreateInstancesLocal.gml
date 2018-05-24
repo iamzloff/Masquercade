@@ -21,7 +21,9 @@
 
 htme_debugger("htme_serverRecreateInstancesLocal",htme_debug.DEBUG,"Recreating local missing instances...");
 
-var mapToUse = self.globalInstances;
+//var mapToUse = self.globalInstances;
+var mapToUse=ds_map_create();
+ds_map_copy(mapToUse,self.globalInstances);
 
 var key= ds_map_find_first(mapToUse);
 //This will loop through all global instances
@@ -52,23 +54,23 @@ for(var i=0; i<ds_map_size(mapToUse); i+=1) {
             self.htme_mp_player = backupEntry[? "player"];
             //rest get's added via mp_sync
             //...but we need to add everything from the backupEntry, which
-            //is easy:
-            x = backupVars[? "x"];
-            y = backupVars[? "y"];
-            image_alpha = backupVars[? "image_alpha"];
-            image_blend = backupVars[? "image_blend"];
-            image_index = backupVars[? "image_index"];
-            image_speed = backupVars[? "image_speed"];
-            image_xscale = backupVars[? "image_xscale"];
-            image_yscale = backupVars[? "image_yscale"];
-            visible = backupVars[? "visible"];
-            direction =  backupVars[? "direction"];
-            gravity = backupVars[? "gravity"];
-            gravity_direction = backupVars[? "gravity_direction"];
-            friction = backupVars[? "friction"];
-            hspeed = backupVars[? "hspeed"];
-            vspeed = backupVars[? "vspeed"];
-            self.htme_mp_vars = ds_map_create();
+            //is easy:            
+            if !is_undefined(backupVars[? "x"]) x = backupVars[? "x"];
+            if !is_undefined(backupVars[? "y"]) y = backupVars[? "y"];
+            if !is_undefined(backupVars[? "image_alpha"]) image_alpha = backupVars[? "image_alpha"];
+            if !is_undefined(backupVars[? "image_blend"]) image_blend = backupVars[? "image_blend"];
+            if !is_undefined(backupVars[? "image_index"]) image_index = backupVars[? "image_index"];
+            if !is_undefined(backupVars[? "image_speed"]) image_speed = backupVars[? "image_speed"];
+            if !is_undefined(backupVars[? "image_xscale"]) image_xscale = backupVars[? "image_xscale"];
+            if !is_undefined(backupVars[? "image_yscale"]) image_yscale = backupVars[? "image_yscale"];
+            if !is_undefined(backupVars[? "visible"]) visible = backupVars[? "visible"];
+            if !is_undefined(backupVars[? "direction"]) direction =  backupVars[? "direction"];
+            if !is_undefined(backupVars[? "gravity"]) gravity = backupVars[? "gravity"];
+            if !is_undefined(backupVars[? "gravity_direction"]) gravity_direction = backupVars[? "gravity_direction"];
+            if !is_undefined(backupVars[? "friction"]) friction = backupVars[? "friction"];
+            if !is_undefined(backupVars[? "hspeed"]) hspeed = backupVars[? "hspeed"];
+            if !is_undefined(backupVars[? "vspeed"]) vspeed = backupVars[? "vspeed"];
+            //self.htme_mp_vars = ds_map_create(); // should already be created in above code [instance_create(-100,-100,backupEntry[? "object"])]
             ds_map_copy(self.htme_mp_vars,backupVars);
             event_perform(ev_step,ev_step_end);
         }
@@ -76,3 +78,6 @@ for(var i=0; i<ds_map_size(mapToUse); i+=1) {
 
     key = ds_map_find_next(mapToUse, key);
 }
+
+// Clean
+ds_map_destroy(mapToUse);

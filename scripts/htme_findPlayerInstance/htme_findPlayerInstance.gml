@@ -16,7 +16,7 @@
 **      player     string      hash of the player
 **
 **  Returns:
-**      instance id or -1
+**      instance id or noone
 **
 */
 
@@ -34,4 +34,4 @@ for(var i=0; i<ds_map_size(global.htme_object.globalInstances); i+=1) {
     }
     key = ds_map_find_next(global.htme_object.globalInstances, key);
 }
-return -1;
+return noone;

@@ -1,1 +1,1 @@
-global.roomcamefrom = rm_menu
+global.roomcamefrom = rm_lobbies

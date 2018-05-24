@@ -1,5 +1,5 @@
 {
-    "id": "e5312c50-a212-4e8f-b733-9bdd96dde110",
+    "id": "15552b28-628d-46ce-a5cc-394c4fe81982",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_chatGetMessage",

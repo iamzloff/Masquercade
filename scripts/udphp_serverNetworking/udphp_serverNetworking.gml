@@ -36,7 +36,7 @@ var players = global.udphp_server_players;
 
 //Only continue if this is for the server
 if (in_id != global.udphp_server_udp and in_id != global.udphp_server_tcp) exit;
-
+buffer_seek(in_buff, buffer_seek_start, 0);
 
 //SCENARIO 1: Master server sends client information! Somebody wants to connect
 if (in_ip == global.udphp_master and in_id == global.udphp_server_tcp) {
@@ -46,10 +46,12 @@ if (in_ip == global.udphp_master and in_id == global.udphp_server_tcp) {
     switch com {
         case udphp_packet.MASTER:
             //Comamnd indicates, that a client tries to connect: Store his information in incoming_requests and try to connect in udphp_serverPunch
+            show_debug_message("============ udphp_serverNetworking ============ BUFFER SIZE:" + string(buffer_get_size(in_buff)) + " TELL:" + string(buffer_tell(in_buff)));
+            if buffer_get_size(in_buff)=1 exit;
             var client_ip = buffer_read(in_buff, buffer_string );
             var client_port = real(buffer_read(in_buff, buffer_string ));
-            ds_map_add(incoming_requests,client_ip+":"+string(client_port),0);
-            udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "Client "+client_ip+string(client_port)+ "wants to connect.");
+            ds_map_add(incoming_requests,string(client_ip)+":"+string(client_port),0);
+            udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "Client "+string(client_ip)+string(client_port)+ "wants to connect.");
         break;
         default:
             udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "Unknown message from master server. ("+string(com)+")");
@@ -57,20 +59,20 @@ if (in_ip == global.udphp_master and in_id == global.udphp_server_tcp) {
     }
 } 
 //SCENARIO 2: Client that is not yet on the players list connected.
-else if (ds_list_find_index(players,in_ip+":"+string(in_port)) == -1) {
+else if (ds_list_find_index(players,string(in_ip)+":"+string(in_port)) == -1) {
     //Read command
         switch buffer_read(in_buff, buffer_s8 ) {
         case udphp_packet.KNOCKKNOCK:
             var buffer = global.udphp_server_buffer;
             //Client finally reached us. Store his information in our player list
-            ds_list_add(players,in_ip+":"+string(in_port));
+            ds_list_add(players,string(in_ip)+":"+string(in_port));
             //Also tell him he's connected.
             //UPDATE: We now do this by adding him to a new list and spamming him
             //for the duration of the timeout with the Welcome packet. If he doesn't get it
             //the server thinks we are connected, but we aren't! Time the players out like in
             //the demo to check if they are connected.
-            ds_map_add(incoming_requests2,in_ip+":"+string(in_port),0);
-            udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "CONNECTED TO CLIENT "+in_ip+":"+string(in_port));
+            ds_map_add(incoming_requests2,string(in_ip)+":"+string(in_port),0);
+            udphp_handleerror(udphp_dbglvl.DEBUG, udphp_dbgtarget.SERVER, 0, "CONNECTED TO CLIENT "+string(in_ip)+":"+string(in_port));
         break;
     }
 }

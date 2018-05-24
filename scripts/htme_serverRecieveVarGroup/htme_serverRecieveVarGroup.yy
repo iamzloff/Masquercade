@@ -1,5 +1,5 @@
 {
-    "id": "c6bdd1ff-0164-451b-8657-f1ce0a30b78a",
+    "id": "939b7977-4145-4701-876a-ec5543572bae",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "htme_serverRecieveVarGroup",

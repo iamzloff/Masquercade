@@ -1,4 +1,8 @@
-//htme_chatAddToQueue(channel,message,to)
+/// @description htme_chatAddToQueue(channel,message,data string,to)
+/// @param channel
+/// @param message
+/// @param data string
+/// @param to
 
 /*
 **  Description:
@@ -25,11 +29,13 @@
 
 var channel = argument0;
 var message = argument1;
-var to = argument2; //Currently not used.
+var dataString=argument2;
+var to = argument3;
 
-htme_debugger("htme_chatSend",htme_debug.CHATDEBUG,"CHAT API ["+channel+"] - Recieved message "+message);
+htme_debugger("htme_chatSend",htme_debug.CHATDEBUG,"CHAT API ["+channel+"] - Recieved message "+message+" with dataString " + dataString);
 
 //This will add the channel if it doesn't exist yet and then return it.
 var queue = htme_chatAddChannel(channel);
 
 ds_queue_enqueue(queue, message);
+ds_queue_enqueue(queue, dataString);

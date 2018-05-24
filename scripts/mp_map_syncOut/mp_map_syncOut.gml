@@ -5,7 +5,8 @@
 /*
 **  Description:
 **      Returns the value of varName in the variable map of this instance to
-**      sync the variable map of the engine to the instance.
+**      sync the variable map of the engine to the instance, unless this is a
+**      local instance.
 **  
 **  Usage:
 **      <See above>
@@ -23,7 +24,9 @@
 */
 
 var v = ds_map_find_value(self.htme_mp_vars,argument0);
-if (!is_undefined(v)) {
+if (htme_isLocal()) {
+  return argument1;
+} else if (!is_undefined(v)) {
    return v;
 } else {
   return argument1;
