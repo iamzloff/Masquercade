@@ -9,10 +9,11 @@
         "b7feb4dd-4c97-47b9-90a3-a65dfd95ed21",
         "a3b0d440-6d34-4484-8878-923653b16ad2",
         "a51d6e11-4446-4527-9b7b-d874960e42a9",
-        "c5effff0-fe07-4c50-aa41-63778fd7aef4"
+        "c5effff0-fe07-4c50-aa41-63778fd7aef4",
+        "042e509f-979b-4ea2-9713-51d726c5210d"
     ],
     "filterType": "GMSprite",
-    "folderName": "Lobby Select",
+    "folderName": "Lobbies",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

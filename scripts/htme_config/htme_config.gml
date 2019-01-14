@@ -7,7 +7,7 @@
  * will be shown. NONE disables debug messages.
  * For possible levels see htme_init
  */
-self.debuglevel = htme_debug.INFO;
+self.debuglevel = htme_debug.DEBUG;
 
 /** 
  * Enable or disable the debug overlay. Provides you with useful debugging tools.
@@ -18,9 +18,9 @@ self.debugoverlay = true;
 
 /** 
  * Use different versions of Game Maker Studio
- * 1: network_create_socket_ext(network_socket_udp,port); >1.4.1567
+ * 1: network_create_socket_ext(network_socket_udp,port); =<1.4.1567
  * 2: network_create_socket(network_socket_udp); For tests
- * 3: network_create_server(network_socket_udp,port,maxclients); <=1.4.1567
+ * 3: network_create_server(network_socket_udp,port,maxclients); >1.4.1567
  */
 self.gmversionpick=3;
 
@@ -45,10 +45,8 @@ self.use_udphp = true;
  * IP of the master/mediation server 
  * THERE CAN BE NO GAME SERVER RUNNING ON THIS IP!!
  * Use 95.85.63.183 if you have no server. It is only for debugging!
- * @type string
  */
-self.udphp_master_ip = "97.91.32.72";
-
+self.udphp_master_ip = "159.65.102.23";
 /** 
  * WHEN USING GMnet PUNCH:
  * Port of the master/mediation server 

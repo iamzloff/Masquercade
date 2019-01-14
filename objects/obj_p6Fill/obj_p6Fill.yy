@@ -4,7 +4,16 @@
     "mvc": "1.0",
     "name": "obj_p6Fill",
     "eventList": [
-        
+        {
+            "id": "a42e2397-92e5-47b6-b0e2-48301d7b6a86",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 0,
+            "m_owner": "0b8c28bf-574f-4e1d-b22d-8ba605011499"
+        }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
