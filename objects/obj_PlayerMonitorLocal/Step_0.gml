@@ -94,3 +94,16 @@ if instance_exists(obj_p7HandLocal){
 global.p7cn = obj_p7HandLocal.Char;}
 if instance_exists(obj_p8HandLocal){
 global.p8cn = obj_p8HandLocal.Char;}
+
+if room==rm_MacroSelLocal{
+	global.p1join = false;
+	global.p2join = false;
+	global.p3join = false;
+	global.p4join = false;
+	global.p5join = false;
+	global.p6join = false;
+	global.p7join = false;
+	global.p8join = false;
+	global.pCount = 0;
+	instance_destroy()
+}

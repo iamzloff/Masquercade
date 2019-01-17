@@ -2,8 +2,7 @@
 if (gamepad_button_check_pressed(CN, gp_face1)){
 	image_index = 1;
 }
-else
-{
+if (gamepad_button_check_released(CN, gp_face1)){
 	image_index = 0;
 }
 //Cursor movement via analog stick//

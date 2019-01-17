@@ -551,14 +551,6 @@
             }
         },
         {
-            "Key": "4707218e-3ee9-41f3-9ede-62b02b0cf557",
-            "Value": {
-                "id": "11ca69bb-5f21-4277-9216-f702f9ab1fac",
-                "resourcePath": "sprites\\spr_TextFitBox\\spr_TextFitBox.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "4780927b-cb81-4d66-b445-c9fc9861370c",
             "Value": {
                 "id": "170e6632-4eab-4308-b21d-de5ceab0ba26",
@@ -890,7 +882,7 @@
             "Key": "6be9d9b5-e9ff-4ecc-a495-17623b0051c3",
             "Value": {
                 "id": "d9830161-1c69-48d2-80d8-6b6e5b071f37",
-                "resourcePath": "objects\\obj_fruitasticscurry\\obj_fruitasticscurry.yy",
+                "resourcePath": "objects\\obj_MiniMania\\obj_MiniMania.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1004,14 +996,6 @@
                 "id": "ba704363-71c2-4bae-b7eb-bcee0c2f174c",
                 "resourcePath": "objects\\obj_p4HandLocal\\obj_p4HandLocal.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "7cab30b6-e7b1-480f-be6d-7e23a19fe07e",
-            "Value": {
-                "id": "682c9af4-6f50-4536-a5f4-47644117e421",
-                "resourcePath": "views\\7cab30b6-e7b1-480f-be6d-7e23a19fe07e.yy",
-                "resourceType": "GMFolder"
             }
         },
         {

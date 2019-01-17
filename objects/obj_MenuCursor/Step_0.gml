@@ -8,8 +8,6 @@ if (gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(
 // Cursor Movement Via Mouse
 MYCurrent = mouse_y;
 MXCurrent = mouse_x;
-MYLast = 0;
-MXLast = 0;
 if (MYCurrent != MYLast){
 		MYLast = MYCurrent;
 		obj_MenuCursor.y = MYLast;
@@ -190,22 +188,4 @@ if room==rm_lobbies{
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobLocal){
 		room_goto(rm_CharSelLocal);
 		}
-	//Lobbies Select Interactivity-- ONLY APPLIES IN LOBBIES ROOM//	
-	// Create a new Server Instance //
-	//if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobCreate){
-	//if (htme_serverStart(6510,8)) {
-		//room_goto(rm_characterselect);
-	//} else {
-	//	show_message("Could not start server! Check your network configuration!");
-	//}}
-	// Direct Connect to Server Instance //
-	//if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobDirCon){
-	//var ip = get_string("To which server should we connect?","");
-	//if (htme_clientStart(ip, 6510)) {
-    //room_goto(rm_connecting); //NOTE THAT WE ARE GOING TO ANOTHER ROOM HERE THAN THE SERVER ABOVE
-	//	} else {
-    //show_message("Connection failed! Check your network configuration!");
-    //game_end();
-	//	}
-	//}
 }
