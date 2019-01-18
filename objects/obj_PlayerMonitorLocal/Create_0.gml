@@ -1,6 +1,3 @@
-//Image Set//
-image_speed = 0;
-image_index = 0;
 //Monitor Player Count and how many are Ready//
 global.pCount = 0
 global.pReady = 0

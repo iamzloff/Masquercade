@@ -5,13 +5,13 @@
     "name": "obj_C4IconLocal",
     "eventList": [
         {
-            "id": "d4eb48f7-b57c-4d9c-8069-0c4c857227c5",
+            "id": "7b78c763-462e-4a7a-af68-4adf62eb6c2d",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 3,
+            "eventtype": 0,
             "m_owner": "fc93496e-b8cf-4669-9f07-800deb9e831f"
         }
     ],

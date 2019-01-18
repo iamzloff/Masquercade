@@ -1,26 +1,29 @@
 if room==rm_CharSelLocal{
-//All Players Ready Lock Screen Monitor//
-if(global.pCount != 0){
-	if(global.pCount == global.pReady){
-	global.allready = 1;
-	obj_ChainLocal.visible = true;
-	obj_PressStartLocal.visible = true;
-	obj_BlackdropLocal.visible = true;
+	//Check if there are any players and if they are all ready//
+	if (global.pCount == global.pReady) and (global.pCount != 0){
+		global.allready = true;
 	}
-	if(global.pCount > global.pReady){
-	global.allready = 0;
-	obj_ChainLocal.visible = false;
-	obj_PressStartLocal.visible = false;
-	obj_BlackdropLocal.visible = false;
+	if !(global.pCount == global.pReady) and (global.pCount != 0){
+		global.allready = false;
 	}
-}
+	//Show or hide chains based on if all players are ready//
+	if (global.allready = true){
+		obj_ChainLocal.visible = true;
+		obj_PressStartLocal.visible = true;
+		obj_BlackdropLocal.visible = true;
+	}	
+	if (global.allready = false){
+		obj_ChainLocal.visible = false;
+		obj_PressStartLocal.visible = false;
+		obj_BlackdropLocal.visible = false;
+	}
 //Set Player Number Based on Number Player Join//
 if (gamepad_button_check_pressed(0, gp_start) or keyboard_check_pressed(vk_enter)) {
 switch (global.pCount)
    {
    case 0:
     obj_p1Select.image_index = 1;
-	obj_p1Fill.image_index = 1;
+	obj_p1Fill.image_index = 6;
 	global.p1join = true;
 	global.pCount += 1;
 	instance_create_depth(930, 520, -1000, obj_p1HandLocal);
@@ -94,16 +97,3 @@ if instance_exists(obj_p7HandLocal){
 global.p7cn = obj_p7HandLocal.Char;}
 if instance_exists(obj_p8HandLocal){
 global.p8cn = obj_p8HandLocal.Char;}
-
-if room==rm_MacroSelLocal{
-	global.p1join = false;
-	global.p2join = false;
-	global.p3join = false;
-	global.p4join = false;
-	global.p5join = false;
-	global.p6join = false;
-	global.p7join = false;
-	global.p8join = false;
-	global.pCount = 0;
-	instance_destroy()
-}

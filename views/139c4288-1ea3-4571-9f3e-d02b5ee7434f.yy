@@ -11,7 +11,8 @@
         "009f8870-5f4c-4bd7-b49a-5d28361fcb24",
         "0b8c28bf-574f-4e1d-b22d-8ba605011499",
         "61abb32f-6afc-4b83-b048-d73824297296",
-        "1fc695b3-d6f1-4f38-bae1-a14fdcba409a"
+        "1fc695b3-d6f1-4f38-bae1-a14fdcba409a",
+        "984a87c2-04ed-4818-a9ba-d43152f8f1da"
     ],
     "filterType": "GMObject",
     "folderName": "Fills",

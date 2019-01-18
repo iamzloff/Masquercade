@@ -16,50 +16,6 @@
     "edgeFiltering": false,
     "frames": [
         {
-            "id": "9dd0af24-3544-4880-880f-273b09c81e7c",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e03826d8-6491-4570-aacf-c39638794ccd",
-            "compositeImage": {
-                "id": "83c3e813-1136-4965-b2f1-731af90eec3f",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "9dd0af24-3544-4880-880f-273b09c81e7c",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "ecb4f653-ad8e-42e4-9493-3664c57e6bbe",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "9dd0af24-3544-4880-880f-273b09c81e7c",
-                    "LayerId": "ade88eab-9bad-4e4b-8e40-941c731c371f"
-                }
-            ]
-        },
-        {
-            "id": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
-            "modelName": "GMSpriteFrame",
-            "mvc": "1.0",
-            "SpriteId": "e03826d8-6491-4570-aacf-c39638794ccd",
-            "compositeImage": {
-                "id": "0f4dca3e-b3ce-4f41-9b06-549954b3b1b9",
-                "modelName": "GMSpriteImage",
-                "mvc": "1.0",
-                "FrameId": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
-                "LayerId": "00000000-0000-0000-0000-000000000000"
-            },
-            "images": [
-                {
-                    "id": "a14fdfe7-1401-4340-82c7-b07db7754d4d",
-                    "modelName": "GMSpriteImage",
-                    "mvc": "1.0",
-                    "FrameId": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
-                    "LayerId": "ade88eab-9bad-4e4b-8e40-941c731c371f"
-                }
-            ]
-        },
-        {
             "id": "8525f14f-3659-4032-8dad-85fb25ac7c07",
             "modelName": "GMSpriteFrame",
             "mvc": "1.0",
@@ -143,6 +99,50 @@
                     "modelName": "GMSpriteImage",
                     "mvc": "1.0",
                     "FrameId": "7151ada1-626a-4d10-8a6e-098f799234d9",
+                    "LayerId": "ade88eab-9bad-4e4b-8e40-941c731c371f"
+                }
+            ]
+        },
+        {
+            "id": "9dd0af24-3544-4880-880f-273b09c81e7c",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "e03826d8-6491-4570-aacf-c39638794ccd",
+            "compositeImage": {
+                "id": "83c3e813-1136-4965-b2f1-731af90eec3f",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "9dd0af24-3544-4880-880f-273b09c81e7c",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "ecb4f653-ad8e-42e4-9493-3664c57e6bbe",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "9dd0af24-3544-4880-880f-273b09c81e7c",
+                    "LayerId": "ade88eab-9bad-4e4b-8e40-941c731c371f"
+                }
+            ]
+        },
+        {
+            "id": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
+            "modelName": "GMSpriteFrame",
+            "mvc": "1.0",
+            "SpriteId": "e03826d8-6491-4570-aacf-c39638794ccd",
+            "compositeImage": {
+                "id": "0f4dca3e-b3ce-4f41-9b06-549954b3b1b9",
+                "modelName": "GMSpriteImage",
+                "mvc": "1.0",
+                "FrameId": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
+                "LayerId": "00000000-0000-0000-0000-000000000000"
+            },
+            "images": [
+                {
+                    "id": "a14fdfe7-1401-4340-82c7-b07db7754d4d",
+                    "modelName": "GMSpriteImage",
+                    "mvc": "1.0",
+                    "FrameId": "c3449006-f25e-4274-9f8d-0fe66b3e8201",
                     "LayerId": "ade88eab-9bad-4e4b-8e40-941c731c371f"
                 }
             ]

@@ -4,20 +4,11 @@
     "mvc": "1.0",
     "name": "obj_p7Fill",
     "eventList": [
-        {
-            "id": "b1de6008-2375-470c-9c59-ca409c2d0bef",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "61abb32f-6afc-4b83-b048-d73824297296"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,
-    "parentObjectId": "00000000-0000-0000-0000-000000000000",
+    "parentObjectId": "984a87c2-04ed-4818-a9ba-d43152f8f1da",
     "persistent": false,
     "physicsAngularDamping": 0.1,
     "physicsDensity": 0.5,

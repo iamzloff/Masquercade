@@ -8,7 +8,8 @@
         "e2b84e13-347c-4fa5-a502-570a8c70aa69",
         "263474b4-9332-4b53-8c2b-312e3c07a85f",
         "2f09e53b-36b3-4cd4-93f0-6c772958f21a",
-        "813ff772-b952-4e5f-a411-516d9212c917"
+        "813ff772-b952-4e5f-a411-516d9212c917",
+        "6539918f-4d03-40b5-af56-d9383c403a29"
     ],
     "filterType": "GMObject",
     "folderName": "Local Play",

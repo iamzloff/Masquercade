@@ -1207,6 +1207,14 @@
             }
         },
         {
+            "Key": "984a87c2-04ed-4818-a9ba-d43152f8f1da",
+            "Value": {
+                "id": "b0364231-3674-447e-a239-fb2f1dcd3cea",
+                "resourcePath": "objects\\obj_FillParent\\obj_FillParent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "999227ae-2987-45d4-b382-8ee53a46d195",
             "Value": {
                 "id": "f83fc79b-19cf-4da0-b97a-f6336e98374c",
@@ -1498,7 +1506,7 @@
             "Key": "bec06810-2d7c-46d9-8f9e-b3809d36fe87",
             "Value": {
                 "id": "8e24a1de-7633-4599-b509-ea819fb24bc9",
-                "resourcePath": "objects\\obj_macrocollisionparent\\obj_macrocollisionparent.yy",
+                "resourcePath": "objects\\obj_MacroColParent\\obj_MacroColParent.yy",
                 "resourceType": "GMObject"
             }
         },

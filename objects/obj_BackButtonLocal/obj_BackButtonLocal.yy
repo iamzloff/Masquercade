@@ -5,16 +5,6 @@
     "name": "obj_BackButtonLocal",
     "eventList": [
         {
-            "id": "9285551e-7c58-427e-afe2-a20b24a5d14b",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "2be56e7e-ddda-4f29-a869-e209066cdf28"
-        },
-        {
             "id": "37ecec4a-1848-458e-8ae4-f9dc6318b8b6",
             "modelName": "GMEvent",
             "mvc": "1.0",
