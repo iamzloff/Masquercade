@@ -23,14 +23,20 @@ if room==rm_CharSelLocal{
 		global.pReady += 1;
 		Locked = 1;
 	}
-	if (Locked = 1) and (gamepad_button_check_released(CN, gp_face2)){
-		Locked = 0;
-		global.pReady -= 1;
-	}
-	if (Locked = 0) and (gamepad_button_check_released(CN, gp_face2)){
-		global.pCount -= 1;
-		global.p1join = false;
-	}
+	if gamepad_button_check_pressed(CN, gp_face2) {
+		switch (Locked)
+		{
+		case 0:
+			global.pCount -= 1;
+			global.p1join = false;
+		break;
+		case 1:
+			Locked = 0;
+			global.pReady -= 1;
+		break;
+		}}
+
+
 	//Character Hover Interaction//
 	if (inst != noone) {
 		Fill.image_index = inst.CUID

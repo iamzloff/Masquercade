@@ -1538,7 +1538,7 @@
             "Key": "c1af24bd-6977-41aa-bf45-7778da45f5dc",
             "Value": {
                 "id": "409d043a-5f88-4eb8-a982-e8fa88d26e72",
-                "resourcePath": "sprites\\Test\\Test.yy",
+                "resourcePath": "sprites\\spr_Chain\\spr_Chain.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -1754,7 +1754,7 @@
             "Key": "dea6d5f7-4bcd-4b02-b125-7cddb3182299",
             "Value": {
                 "id": "164857b0-0667-43e8-86a0-1cd45a3fa3b5",
-                "resourcePath": "sprites\\sprite32\\sprite32.yy",
+                "resourcePath": "sprites\\spr_Blackdrop\\spr_Blackdrop.yy",
                 "resourceType": "GMSprite"
             }
         },

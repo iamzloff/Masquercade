@@ -3,19 +3,15 @@ if room==rm_CharSelLocal{
 	if (global.pCount == global.pReady) and (global.pCount != 0){
 		global.allready = true;
 	}
-	if !(global.pCount == global.pReady) and (global.pCount != 0){
+	if (global.pCount != global.pReady) and (global.pCount != 0){
 		global.allready = false;
 	}
 	//Show or hide chains based on if all players are ready//
 	if (global.allready = true){
-		obj_ChainLocal.visible = true;
-		obj_PressStartLocal.visible = true;
-		obj_BlackdropLocal.visible = true;
+		tile_layer_show(-700);
 	}	
 	if (global.allready = false){
-		obj_ChainLocal.visible = false;
-		obj_PressStartLocal.visible = false;
-		obj_BlackdropLocal.visible = false;
+		tile_layer_hide(-700);
 	}
 //Set Player Number Based on Number Player Join//
 if (gamepad_button_check_pressed(0, gp_start) or keyboard_check_pressed(vk_enter)) {
