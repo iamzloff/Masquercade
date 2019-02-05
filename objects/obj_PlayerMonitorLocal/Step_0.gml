@@ -13,24 +13,28 @@ if room==rm_CharSelLocal{
 	if (global.allready = false){
 		tile_layer_hide(-700);
 	}
-//Set Player Number Based on Number Player Join//
-if (gamepad_button_check_pressed(0, gp_start) or keyboard_check_pressed(vk_enter)) {
-switch (global.pCount)
-   {
-   case 0:
-    obj_p1Select.image_index = 1;
-	obj_p1Fill.image_index = 6;
+//Player 1 Join and Press Start//
+if (gamepad_button_check_pressed(0, gp_start) and (global.p1join = false)){
 	global.p1join = true;
 	global.pCount += 1;
+	obj_p1Select.image_index = 1;
+	obj_p1Fill.image_index = 6;
 	instance_create_depth(930, 520, -1000, obj_p1HandLocal);
-      break;
-   case 1:
-    obj_p2Select.image_index = 2;
-	obj_p2Fill.image_index = 1;
+}
+if (gamepad_button_check_pressed(0, gp_start) and (global.allready = true)){
+	room_goto(rm_MacroSelLocal);	
+}
+//Player 2 Join and Press Start//
+if (gamepad_button_check_pressed(1, gp_start) and (global.p2join = false)){
 	global.p2join = true;
 	global.pCount += 1;
+	obj_p2Select.image_index = 1;
+	obj_p2Fill.image_index = 7;
 	instance_create_depth(930, 520, -1000, obj_p2HandLocal);
-      break;
+}
+if (gamepad_button_check_pressed(1, gp_start) and (global.allready = true)){
+	room_goto(rm_MacroSelLocal);	
+}
    case 2:
     obj_p3Select.image_index = 3;
 	obj_p3Fill.image_index = 1;

@@ -20,3 +20,6 @@ global.p5cn = 0
 global.p6cn = 0
 global.p7cn = 0
 global.p8cn = 0
+
+//Player 1 Variables//
+global.P1CUID= 0

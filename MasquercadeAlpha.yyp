@@ -322,7 +322,7 @@
             "Key": "263474b4-9332-4b53-8c2b-312e3c07a85f",
             "Value": {
                 "id": "e0cfcb1f-ab5b-40a4-80f9-c98a117ff0f1",
-                "resourcePath": "objects\\obj_PlayerMonitorLocal\\obj_PlayerMonitorLocal.yy",
+                "resourcePath": "objects\\obj_PML\\obj_PML.yy",
                 "resourceType": "GMObject"
             }
         },
