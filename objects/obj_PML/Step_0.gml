@@ -1,41 +1,41 @@
+///Controller Connection Monitoring///
+//Player 1//
+if ((!gamepad_is_connected(0)) and (P1Joined = true)){
+	instance_deactivate_all(true);
+	draw_text(view_wview * 0.5, view_hview * 0.5, "Player 1 Controller Disconnected")
+}
+else
+{
+	instance_activate_all();
+}	
+
+///Character Select Only///
 if room==rm_CharSelLocal{
 	//Check if there are any players and if they are all ready//
-	if (global.pCount == global.pReady) and (global.pCount != 0){
-		global.allready = true;
+	if (pCount = pReady) and (pCount != 0){
+		allReady = true;
 	}
-	if (global.pCount != global.pReady) and (global.pCount != 0){
-		global.allready = false;
+	if (pCount != pReady) and (pCount != 0){
+		allReady = false;
 	}
 	//Show or hide chains based on if all players are ready//
-	if (global.allready = true){
+	if (allReady = true){
 		var lay_id = layer_get_id("Assets");
 		layer_set_visible(lay_id, true);
 	}	
-	if (global.allready = false){
+	else
+	{
 		var lay_id = layer_get_id("Assets");
 		layer_set_visible(lay_id, false);
 	}
-//Player 1 Join and Press Start//
-if (gamepad_button_check_pressed(0, gp_start) and (P1Joined = false)){
-	P1Joined = true;
-	global.pCount += 1;
-	obj_p1Select.image_index = 1;
-	obj_p1Fill.image_index = 6;
-	instance_create_depth(930, 520, -1000, obj_p1HandLocal);
-}
-if (gamepad_button_check_pressed(0, gp_start) and (global.allready = true)){
-	room_goto(rm_MacroSelLocal);	
-}
-//Player 2 Join and Press Start//
-if (gamepad_button_check_pressed(1, gp_start) and (global.p2join = false)){
-	global.p2join = true;
-	global.pCount += 1;
-	obj_p2Select.image_index = 1;
-	obj_p2Fill.image_index = 7;
-	instance_create_depth(930, 520, -1000, obj_p2HandLocal);
-}
-if (gamepad_button_check_pressed(1, gp_start) and (global.allready = true)){
-	room_goto(rm_MacroSelLocal);	
-}
-
+	
+	//Player 1 Join and Press Start//
+	if (gamepad_button_check_pressed(0, gp_start) and (P1Joined = false)){
+		P1Joined = true;
+		pCount++;
+		instance_create_depth(930, 520, -1000, obj_p1HandLocal);
+	}
+	if (gamepad_button_check_pressed(0, gp_start) and (allReady = true)){
+		room_goto(rm_MacroSelLocal);	
+	}
 }

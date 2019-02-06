@@ -1,1 +1,2 @@
-room_goto(rm_FallinAndBallin);
+/// @description Restart Current Room
+room_restart();

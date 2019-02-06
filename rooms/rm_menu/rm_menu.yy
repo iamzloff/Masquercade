@@ -11,7 +11,6 @@
         "4afeb386-c864-40fb-861e-ddabe90072b7",
         "f85b4dbb-b8c6-46cb-bf5b-8ef127ee8cd0",
         "2c3f6696-a31d-4613-819a-01c1d69ca713",
-        "7d3c89fa-603a-40e1-8a2b-eded29950896",
         "d46ecda2-f90a-4ed4-9801-1fdf479bed3e"
     ],
     "IsDnD": false,
@@ -98,39 +97,13 @@
             "visible": true
         },
         {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Misc_Objects",
-            "id": "a2a475cb-2533-433f-94d9-2a5d182cf9e4",
-            "depth": 300,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_2491828A","id": "7d3c89fa-603a-40e1-8a2b-eded29950896","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_2491828A","objId": "009454fa-5d74-483f-a275-e0a43cd1a77d","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 1376,"y": 864}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
             "__type": "GMRBackgroundLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Background",
             "id": "43fe28f5-094d-4b87-a259-3ecad66ef4f1",
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
-            "depth": 400,
+            "depth": 300,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,

@@ -55,14 +55,6 @@
             }
         },
         {
-            "Key": "03347b2a-f7a3-4f07-83ab-b20ceda56493",
-            "Value": {
-                "id": "711e3c2e-445f-4cf1-ae92-f205de1128c3",
-                "resourcePath": "objects\\obj_control_mm_OLD\\obj_control_mm_OLD.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "042e509f-979b-4ea2-9713-51d726c5210d",
             "Value": {
                 "id": "ed8669e4-827c-440c-b984-b65737173976",
