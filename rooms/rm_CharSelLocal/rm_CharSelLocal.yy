@@ -42,7 +42,7 @@
 {"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_1718D47F","id": "a2ffbd72-4d04-4ecd-8832-0239f2569f2a","animationFPS": 33,"animationSpeedType": "0","colour": { "Value": 4294967295 },"frameIndex": 0,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "c1af24bd-6977-41aa-bf45-7778da45f5dc","userdefined_animFPS": false,"x": 960,"y": 540},
 {"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_C24CED9","id": "86378370-8dca-4460-b48d-cb5d42bea285","animationFPS": 15,"animationSpeedType": "0","colour": { "Value": 4294967295 },"frameIndex": 0,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "59dd59e6-855b-4819-aca1-9d921443f009","userdefined_animFPS": false,"x": 955,"y": 544}
             ],
-            "depth": -700,
+            "depth": -7000,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -58,14 +58,14 @@
             "m_serialiseFrozen": false,
             "modelName": "GMRAssetLayer",
             "mvc": "1.0",
-            "userdefined_depth": false,
+            "userdefined_depth": true,
             "visible": true
         },
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "PlayerRings",
             "id": "bf88ed48-dc29-4232-9bbe-d9ddf55e103e",
-            "depth": -600,
+            "depth": -6900,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": true,

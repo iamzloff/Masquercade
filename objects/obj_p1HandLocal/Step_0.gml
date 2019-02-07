@@ -1,3 +1,20 @@
+///MACRO SELECT///
+if room == rm_MacroSelLocal{
+	//Cursor Movement//
+	//Cursor Image Change at press of A button//
+	if (gamepad_button_check_pressed(PadNum, gp_face1)){
+		image_index = 1;
+	}
+	if (gamepad_button_check_released(PadNum, gp_face1)){
+		image_index = 0;
+	}
+	//Cursor movement via analog stick//
+	var haxis = gamepad_axis_value(PadNum, gp_axislh);
+	var vaxis = gamepad_axis_value(PadNum, gp_axislv);
+	direction = point_direction(0, 0, haxis, vaxis);
+	speed = point_distance(0 ,0, haxis, vaxis) * 12;	
+}
+
 ///CHARACTER SELECT///
 if room==rm_CharSelLocal{
 	//Cursor Movement if Player Isn't Locked In//
