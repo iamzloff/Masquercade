@@ -34,6 +34,7 @@ if room==rm_CharSelLocal{
 		P1Joined = true;
 		pCount++;
 		instance_create_depth(930, 520, -1000, obj_p1HandLocal);
+		obj_p1Select.image_index = 1;
 	}
 	if (gamepad_button_check_pressed(0, gp_start) and (allReady = true)){
 		room_goto(rm_MacroSelLocal);	

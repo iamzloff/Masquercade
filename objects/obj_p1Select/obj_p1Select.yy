@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "obj_p1Select",
     "eventList": [
-        {
-            "id": "4d8bc4f9-fe5f-4630-ae75-29d27ab57665",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "12fc9c7a-2ea1-46b6-8f75-acf55d450af4"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "overriddenProperties": null,

@@ -14,6 +14,23 @@ if room == rm_MacroSelLocal{
 	direction = point_direction(0, 0, haxis, vaxis);
 	speed = point_distance(0 ,0, haxis, vaxis) * 12;	
 }
+///MACRO SELECT///
+if room==rm_MacroSelLocal{	
+	//Collision Instance Variable Declaration//
+	var inst = instance_place(x,y,obj_MacroColParent)
+	//Macro Game Selection//
+	if (inst != noone) and (gamepad_button_check_released(PadNum, gp_face1)){
+		room_goto(inst.GUID);
+	}	
+	//Character Hover Interaction//
+	if (inst != noone) {
+		inst.image_index = 1;
+	}
+	if (inst = noone) {
+		obj_MacroColParent.image_index = 0;
+	}
+	
+}
 
 ///CHARACTER SELECT///
 if room==rm_CharSelLocal{
@@ -48,8 +65,9 @@ if room==rm_CharSelLocal{
 		case false:
 			obj_PML.pCount -= 1;
 			obj_PML.P1Joined = false;
-			obj_p1Fill.image_index = obj_PML.FillDefault;
+			obj_p1Fill.image_index = 4;
 			instance_destroy();
+			obj_p1Select.image_index = 0;			
 		break;
 		case true:
 			Locked = false;
@@ -59,10 +77,10 @@ if room==rm_CharSelLocal{
 
 
 	//Character Hover Interaction//
-	if (inst != noone) {
+	if (inst != noone) and (obj_PML.P1Joined = true){
 		obj_p1Fill.image_index = inst.CUID
 	}
-	if (inst = noone) {
+	if (inst = noone) and (obj_PML.P1Joined = true){
 		obj_p1Fill.image_index = obj_PML.FillDefault;
 	}
 }

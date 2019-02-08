@@ -10,3 +10,4 @@ P1CUID = 0;
 P1Joined = false;
 P1PluggedIn = false;
 P1PadID = 0;
+P1RingFill = 1;

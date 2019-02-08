@@ -16,3 +16,18 @@ if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_MenuCurso
 		room_goto(global.roomcamefrom);
 		}
 }
+
+if ((room==rm_CharSelLocal) or (room==rm_MacroSelLocal)) and instance_exists(obj_p1HandLocal){
+	if gamepad_button_check_released(0, gp_face1) and position_meeting(obj_p1HandLocal.x, obj_p1HandLocal.y, obj_BackButtonLocal)
+		{
+		room_goto(global.roomcamefrom);
+		}
+	if !position_meeting(obj_p1HandLocal.x, obj_p1HandLocal.y, obj_BackButtonLocal)
+		{
+		image_index = 0;
+		}
+	if position_meeting(obj_p1HandLocal.x, obj_p1HandLocal.y, obj_BackButtonLocal)
+		{
+		image_index = 1;
+		}
+}
