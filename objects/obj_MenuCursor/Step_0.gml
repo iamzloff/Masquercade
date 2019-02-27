@@ -172,6 +172,7 @@ if room==rm_options{
 	ini_write_real("Video Options","Fullscreen",global.fullscreen);
 	ini_write_real("Video Options","VSync",global.vsync);
 	ini_write_real("Video Options","AntiA",global.antia);
+	ini_write_real("Audio Options","Master Volume",global.volume);
 	ini_close();
 	}
 }

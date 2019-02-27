@@ -10,7 +10,8 @@
         "72b80b8b-03ba-4664-b4ef-b33472f85d47",
         "588bfdad-93b2-432a-92ee-90d45bdfd492",
         "a4404a92-95d5-4942-b771-15aa79e8dc96",
-        "534b8094-c955-42da-9089-418e2617d17f"
+        "534b8094-c955-42da-9089-418e2617d17f",
+        "4bf47baf-b484-4cc2-aced-14ea4d1afceb"
     ],
     "filterType": "GMSprite",
     "folderName": "Options Menu",
