@@ -391,14 +391,6 @@
             }
         },
         {
-            "Key": "2c5bd079-9188-4623-8f07-fdc8d9de0372",
-            "Value": {
-                "id": "6445fbb6-a1bb-4f0c-84ef-b58e75c8da19",
-                "resourcePath": "notes\\compatibility_report_250418_2224232423.yy",
-                "resourceType": "GMNotes"
-            }
-        },
-        {
             "Key": "2ce9a944-d405-45c6-9389-b43f5d9077a3",
             "Value": {
                 "id": "a458d677-107b-41a3-875e-1ec5b27965cb",
@@ -828,14 +820,6 @@
                 "id": "8f04d563-e3d2-427d-ade8-4b77cfbe258c",
                 "resourcePath": "sprites\\spr_AudioSliderText\\spr_AudioSliderText.yy",
                 "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "62493f0f-0c5c-4015-8fa9-7c03108a5217",
-            "Value": {
-                "id": "69a56658-c9b2-48c6-8d5a-6ca31cc3f054",
-                "resourcePath": "notes\\compatibility_report_131017_2138573857.yy",
-                "resourceType": "GMNotes"
             }
         },
         {

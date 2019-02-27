@@ -166,6 +166,7 @@
     "iosThirdPartyFrameworkEntries": [
         
     ],
+    "iosdelegatename": null,
     "iosplistinject": "",
     "license": "Free to use in commercial and non-commercial projects.\\u000aExtension itself may not be sold or sublicensed.",
     "maccompilerflags": "",
@@ -174,5 +175,17 @@
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "tvosProps": false,
+    "tvosSystemFrameworkEntries": [
+        
+    ],
+    "tvosThirdPartyFrameworkEntries": [
+        
+    ],
+    "tvosclassname": null,
+    "tvosdelegatename": null,
+    "tvosmaccompilerflags": null,
+    "tvosmaclinkerflags": null,
+    "tvosplistinject": null,
     "version": "1.0.0"
 }

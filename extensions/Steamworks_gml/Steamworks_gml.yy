@@ -3195,6 +3195,7 @@
     "iosThirdPartyFrameworkEntries": [
         
     ],
+    "iosdelegatename": null,
     "iosplistinject": "",
     "license": "LGPLv3",
     "maccompilerflags": "",
@@ -3203,5 +3204,17 @@
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "tvosProps": false,
+    "tvosSystemFrameworkEntries": [
+        
+    ],
+    "tvosThirdPartyFrameworkEntries": [
+        
+    ],
+    "tvosclassname": null,
+    "tvosdelegatename": null,
+    "tvosmaccompilerflags": null,
+    "tvosmaclinkerflags": null,
+    "tvosplistinject": null,
     "version": "1.0.0"
 }
