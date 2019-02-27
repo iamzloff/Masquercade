@@ -187,6 +187,7 @@ if room==rm_lobbies{
 		obj_LobLocal.image_index = 2;
 		}
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobLocal){
+		instance_destroy();
 		room_goto(rm_CharSelLocal);
 		}
 }

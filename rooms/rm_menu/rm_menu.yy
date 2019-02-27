@@ -2,7 +2,7 @@
 {
     "name": "rm_menu",
     "id": "5530aae1-6d6c-4c2c-8e5c-dc00a1c81c86",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
@@ -10,42 +10,15 @@
         "90562ecc-f75a-4b9c-b6fe-19e40cf778bb",
         "4afeb386-c864-40fb-861e-ddabe90072b7",
         "f85b4dbb-b8c6-46cb-bf5b-8ef127ee8cd0",
-        "2c3f6696-a31d-4613-819a-01c1d69ca713",
-        "d46ecda2-f90a-4ed4-9801-1fdf479bed3e"
+        "2c3f6696-a31d-4613-819a-01c1d69ca713"
     ],
     "IsDnD": false,
     "layers": [
         {
             "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
-            "name": "Cursor",
-            "id": "b8c75f22-e602-4325-afb6-a3a4179b0407",
-            "depth": 0,
-            "grid_x": 32,
-            "grid_y": 32,
-            "hierarchyFrozen": false,
-            "hierarchyVisible": true,
-            "inheritLayerDepth": false,
-            "inheritLayerSettings": false,
-            "inheritSubLayers": false,
-            "inheritVisibility": false,
-            "instances": [
-{"name": "inst_3B482730","id": "d46ecda2-f90a-4ed4-9801-1fdf479bed3e","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_3B482730","objId": "694b2798-1e93-4b83-b015-21eb4054a43a","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","x": 608,"y": 800}
-            ],
-            "layers": [
-
-            ],
-            "m_parentID": "00000000-0000-0000-0000-000000000000",
-            "m_serialiseFrozen": false,
-            "modelName": "GMRInstanceLayer",
-            "mvc": "1.0",
-            "userdefined_depth": false,
-            "visible": true
-        },
-        {
-            "__type": "GMRInstanceLayer_Model:#YoYoStudio.MVCFormat",
             "name": "Menu_Buttons",
             "id": "12e22d5d-b73b-45ef-8405-5926e6509536",
-            "depth": 100,
+            "depth": 0,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -77,7 +50,7 @@
             "assets": [
 {"__type": "GMRSpriteGraphic_Model:#YoYoStudio.MVCFormat","name": "graphic_5E8078B8","id": "6c182a1c-3a32-414e-9bfa-96b0c7ad622f","animationFPS": 0.2,"animationSpeedType": "1","colour": { "Value": 4294967295 },"frameIndex": 1,"ignore": false,"inheritItemSettings": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRSpriteGraphic","rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.0","spriteId": "7d330f55-f8dc-4ea5-a7ff-8ddc6691e94e","userdefined_animFPS": true,"x": 960,"y": 512}
             ],
-            "depth": 200,
+            "depth": 100,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
@@ -103,7 +76,7 @@
             "animationFPS": 15,
             "animationSpeedType": "0",
             "colour": { "Value": 4294967295 },
-            "depth": 300,
+            "depth": 200,
             "grid_x": 32,
             "grid_y": 32,
             "hierarchyFrozen": false,
