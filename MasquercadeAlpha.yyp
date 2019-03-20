@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "17f32fc8-372e-497d-95ef-afcf901605a8",
+            "Value": {
+                "id": "b97ffe70-3c7b-4727-b0e5-eee7e7a7284e",
+                "resourcePath": "sprites\\spr_MMScoreboard\\spr_MMScoreboard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "18a0ca65-3ece-4add-9382-c0920180c8b8",
             "Value": {
                 "id": "e74abbf1-e58a-42a7-8b84-4d281ad8a444",
