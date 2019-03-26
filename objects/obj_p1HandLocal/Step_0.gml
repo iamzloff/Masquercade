@@ -12,7 +12,7 @@ if room == rm_MacroSelLocal{
 	var haxis = gamepad_axis_value(PadNum, gp_axislh);
 	var vaxis = gamepad_axis_value(PadNum, gp_axislv);
 	direction = point_direction(0, 0, haxis, vaxis);
-	speed = point_distance(0 ,0, haxis, vaxis) * 12;	
+	speed = point_distance(0 ,0, haxis, vaxis) * 13;	
 }
 ///MACRO SELECT///
 if room==rm_MacroSelLocal{	
