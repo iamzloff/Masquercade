@@ -1,4 +1,7 @@
 global.roomcamefrom = rm_CharSelLocal
+if (global.Transitioned = true){
+	script_execute(scr_RoomTransitionEnd())
+}
 switch (obj_PML.pCount)
    {
    case 1:
@@ -44,7 +47,6 @@ switch (obj_PML.pCount)
 	  instance_create_depth(930, 520, -1000, obj_p7HandLocal);
       break;
    case 8:
-      
 	  instance_create_depth(930, 520, -1000, obj_p1HandLocal);
 	  instance_create_depth(930, 520, -1000, obj_p2HandLocal);
 	  instance_create_depth(930, 520, -1000, obj_p3HandLocal);

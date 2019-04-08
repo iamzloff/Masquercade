@@ -25,6 +25,8 @@ if room==rm_menu{
 //Menu Option Selection via A -- ONLY APPLIES IN MAIN MENU ROOM//
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_pl){
 	room_goto(rm_lobbies);
+	//global.Transition = rm_lobbies
+	//script_execute(scr_RoomTransitionStart())
 	}
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_en){
 	room_goto(rm_encyclodexicon);

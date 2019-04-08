@@ -20,6 +20,7 @@ if room==rm_MacroSelLocal{
 	var inst = instance_place(x,y,obj_MacroColParent)
 	//Macro Game Selection//
 	if (inst != noone) and (gamepad_button_check_released(PadNum, gp_face1)){
+		
 		room_goto(inst.GUID);
 	}	
 	//Character Hover Interaction//
