@@ -8,7 +8,7 @@
         "c0551c26-427a-4ffa-b79b-8c1aaa30d91a"
     ],
     "filterType": "GMSprite",
-    "folderName": "Load Screen",
+    "folderName": "Transition Curtains",
     "isDefaultView": false,
     "localisedFolderName": ""
 }

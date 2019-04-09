@@ -1,3 +1,4 @@
+///GENERAL///
 //Cursor Image Change at press of A button or Mouse Left Click//
 if (gamepad_button_check_pressed(0, gp_face1)) or (mouse_check_button_pressed(mb_left)){
 	image_index = 1;
@@ -5,6 +6,7 @@ if (gamepad_button_check_pressed(0, gp_face1)) or (mouse_check_button_pressed(mb
 if (gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(mb_left)){
 	image_index = 0;
 }
+
 // Cursor Movement Via Mouse
 MYCurrent = mouse_y;
 MXCurrent = mouse_x;
@@ -16,63 +18,54 @@ if (MXCurrent != MXLast){
 		MXLast = MXCurrent;
 		obj_MenuCursor.x = MXLast;
 }
+
 //Cursor movement via analog stick//
 var haxis = gamepad_axis_value(0, gp_axislh);
 var vaxis = gamepad_axis_value(0, gp_axislv);
 direction = point_direction(0, 0, haxis, vaxis);
 speed = point_distance(0 ,0, haxis, vaxis) * 12;
-if room==rm_menu{
-//Menu Option Selection via A -- ONLY APPLIES IN MAIN MENU ROOM//
-	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_pl){
-	room_goto(rm_lobbies);
-	//global.Transition = rm_lobbies
-	//script_execute(scr_RoomTransitionStart())
+
+///MAIN MENU///
+if room==rm_menu{	
+	//Collision Instance Variable Declaration//
+	var MenuInst = instance_place(x,y,obj_MenuCol)
+	//Button Selection Check//
+	if (MenuInst != noone) and ((gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(mb_left))){
+		if (position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_ex)){
+			game_end();
+		}
+		if (!position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_ex)){
+			room_goto(MenuInst.RUID)
+		}
 	}
-	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_en){
-	room_goto(rm_encyclodexicon);
+	//Button Hover Interaction//
+	if (MenuInst != noone) {
+		MenuInst.image_index = 1;
 	}
-	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_op){
-	room_goto(rm_options);
+	if (MenuInst = noone) {
+		obj_MenuCol.image_index = 0;
 	}
-	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_ex){
-	game_end();
-	}
-	
-//Menu Select Collision -- ONLY APPLIES IN MAIN MENU ROOM//
-	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_pl)
-		{
-		obj_pl.image_index = 0;
-		}
-	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_en)
-		{
-		obj_en.image_index = 0;
-		}
-	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_op)
-		{
-		obj_op.image_index = 0;
-		}
-	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_ex)
-		{
-		obj_ex.image_index = 0;
-		}
-	if position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_pl)
-		{
-		obj_pl.image_index = 1;
-		}
-	if position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_en)
-		{
-		obj_en.image_index = 1;
-		}
-	if position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_op)
-		{
-		obj_op.image_index = 1;
-		}
-	if position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_ex)
-		{
-		obj_ex.image_index = 1;
-		}
 }
 
+///LOBBIES///
+if room==rm_lobbies{
+	//Collision Instance Variable Declaration//
+	var LobbiesInst = instance_place(x,y,obj_LobbiesCol)
+	//Button Selection Check//
+	if (LobbiesInst != noone) and ((gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(mb_left))){
+		instance_destroy();
+		room_goto(LobbiesInst.LUID);
+	}
+	//Button Hover Interaction//
+	if (LobbiesInst != noone) {
+		LobbiesInst.image_index = 2;
+	}
+	if (LobbiesInst = noone) {
+		obj_LobbiesCol.image_index = 1;
+	}
+}
+
+///OPTIONS///
 if room==rm_options{
 	//Options Select Collision -- ONLY APPLIES IN OPTIONS ROOM//
 	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_leftarrow)
@@ -165,10 +158,10 @@ if room==rm_options{
 	}
 	//Options Apply Button --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_optionsapply){
-		//Reset Video for Player//
+	//Reset Video for Player//
 	window_set_fullscreen(global.fullscreen);
 	display_reset(global.antia, global.vsync);
-		//Save to Options ini File//
+	//Save to Options ini File//
 	if (file_exists("Save.mq")) file_delete("Save.mq");
 	ini_open("Save.mq");
 	ini_write_real("Video Options","Fullscreen",global.fullscreen);
@@ -177,19 +170,4 @@ if room==rm_options{
 	ini_write_real("Audio Options","Master Volume",global.volume);
 	ini_close();
 	}
-}
-if room==rm_lobbies{
-	//Lobbies Select Collision -- ONLY APPLIES IN LOBBIES ROOM//
-	if !position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobLocal)
-		{
-		obj_LobLocal.image_index = 1;
-		}
-	if position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobLocal)
-		{
-		obj_LobLocal.image_index = 2;
-		}
-	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_LobLocal){
-		instance_destroy();
-		room_goto(rm_CharSelLocal);
-		}
 }

@@ -1,2 +1,1 @@
-image_speed = 0;
-
+RUID = rm_lobbies;

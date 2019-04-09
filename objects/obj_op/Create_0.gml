@@ -1,3 +1,1 @@
-x = room_width/2;
-image_speed = 0;
-
+RUID = rm_options;
