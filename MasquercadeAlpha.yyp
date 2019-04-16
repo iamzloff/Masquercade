@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "20f4c834-0752-492d-94f3-9cfc490bd2f3",
+            "Value": {
+                "id": "a8b7dbf9-6d3d-4890-994f-2b30d61ffe43",
+                "resourcePath": "sprites\\spr_LootLuteText\\spr_LootLuteText.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "22a76199-7f8b-4294-b240-c7769355b119",
             "Value": {
                 "id": "fb34af45-86c7-4c51-bf84-199e918829ee",
@@ -1180,6 +1188,14 @@
                 "id": "523b92bc-4f12-4995-b97f-0aa92a33e7bf",
                 "resourcePath": "views\\8682219a-3879-45cd-a8bf-5589985fe80f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "88d71ec7-af29-46f7-b572-0ee456334cd0",
+            "Value": {
+                "id": "c8f35533-7be0-4e74-ba1e-6255f3ee4393",
+                "resourcePath": "sprites\\spr_LootLuteMenu\\spr_LootLuteMenu.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
