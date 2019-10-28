@@ -1,7 +1,7 @@
 {
     "id": "149c4f0e-96fe-4c4a-a9ec-2aa79a179849",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "Steamworks_gml",
     "IncludedResources": [
         
@@ -20,6 +20,7 @@
     "copyToTargets": 202375362,
     "date": "2018-12-11 12:05:16",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -3201,9 +3202,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 202375362,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

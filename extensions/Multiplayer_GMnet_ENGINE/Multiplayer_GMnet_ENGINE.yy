@@ -1,7 +1,7 @@
 {
     "id": "a71e1649-af5b-4c03-baab-977952e1637f",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "Multiplayer_GMnet_ENGINE",
     "IncludedResources": [
         "Sprites\\htme_demo\\htme_spr_wall",
@@ -185,6 +185,7 @@
     "copyToTargets": -1,
     "date": "2018-24-25 10:04:21",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         
@@ -199,13 +200,29 @@
     "iosThirdPartyFrameworkEntries": [
         
     ],
+    "iosdelegatename": null,
     "iosplistinject": "",
     "license": "Free to use, also for commercial games.",
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "com.happytear.htmeplusudphp",
     "productID": "ACBD3CFF4E539AD869A0E8E3B4B022DD",
     "sourcedir": "",
+    "supportedTargets": -1,
+    "tvosProps": false,
+    "tvosSystemFrameworkEntries": [
+        
+    ],
+    "tvosThirdPartyFrameworkEntries": [
+        
+    ],
+    "tvosclassname": null,
+    "tvosdelegatename": null,
+    "tvosmaccompilerflags": null,
+    "tvosmaclinkerflags": null,
+    "tvosplistinject": null,
     "version": "1.3.1"
 }

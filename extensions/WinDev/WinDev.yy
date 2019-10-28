@@ -1,7 +1,7 @@
 {
     "id": "ced2041b-867f-4d8b-9d6f-d2a11145b1e4",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "WinDev",
     "IncludedResources": [
         "Objects\\obj_dual_instance"
@@ -20,6 +20,7 @@
     "copyToTargets": 1048640,
     "date": "2018-12-11 12:05:16",
     "description": "Adds several Windows-specific functions for GameMaker: Studio.\\u000aSee blog post for details:\\u000ahttp:\/\/yal.cc\/gamemaker-windows-functions-for-gamemaker-studio",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -172,9 +173,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 1048640,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

@@ -9,7 +9,8 @@ if mouse_check_button(mb_left) {
 if !mouse_check_button(mb_left) {
 	selected = false;
 }
-if selected {
+
+if selected and global.MuteAll = false {
 	global.volume = clamp((mouse_x-x)/sprite_width, 0, max_volume);
 	audio_set_master_gain(audiogroup_default, global.volume);;
 }

@@ -1,7 +1,7 @@
 {
     "id": "89956944-19e2-4086-80d2-309f3934462b",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "GameAnalyticsExt",
     "IncludedResources": [
         
@@ -21,6 +21,7 @@
     "copyToTargets": 35184372089070,
     "date": "2017-12-18 02:08:48",
     "description": "",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -4335,9 +4336,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 35184372089070,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

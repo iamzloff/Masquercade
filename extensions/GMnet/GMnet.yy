@@ -1,7 +1,7 @@
 {
     "id": "59b90c41-9639-4ec3-82a9-016f31378199",
     "modelName": "GMExtension",
-    "mvc": "1.0",
+    "mvc": "1.2",
     "name": "GMnet",
     "IncludedResources": [
         "Sprites\\htme_demo\\htme_spr_wall",
@@ -269,6 +269,7 @@
     "copyToTargets": 105553895391470,
     "date": "2018-12-11 12:05:15",
     "description": "Additional resources for GMnet ENGINE\/PUNCH",
+    "exportToGame": true,
     "extensionName": "",
     "files": [
         {
@@ -422,9 +423,12 @@
     "maccompilerflags": "",
     "maclinkerflags": "",
     "macsourcedir": "",
+    "options": null,
+    "optionsFile": "options.json",
     "packageID": "",
     "productID": "",
     "sourcedir": "",
+    "supportedTargets": 105553895391470,
     "tvosProps": false,
     "tvosSystemFrameworkEntries": [
         

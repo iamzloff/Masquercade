@@ -156,6 +156,19 @@ if room==rm_options{
 	global.vsync = false;
 	}
 	}
+	//Options Audio Mute All Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
+	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_MuteAudio){
+	if(obj_MuteAudio.image_index = 0){
+	obj_MuteAudio.image_index = 1;
+	global.MuteAll = true;
+	audio_set_master_gain(audiogroup_default, 0)
+	}
+	else{
+	obj_MuteAudio.image_index = 0;
+	global.MuteAll = false;
+	audio_set_master_gain(audiogroup_default, global.volume)
+	}
+	}
 	//Options Apply Button --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_optionsapply){
 	//Reset Video for Player//
@@ -167,7 +180,16 @@ if room==rm_options{
 	ini_write_real("Video Options","Fullscreen",global.fullscreen);
 	ini_write_real("Video Options","VSync",global.vsync);
 	ini_write_real("Video Options","AntiA",global.antia);
-	ini_write_real("Audio Options","Master Volume",global.volume);
+	switch(global.MuteAll){
+		case false:
+		ini_write_real("Audio Options","Master Volume",global.volume);
+		ini_write_real("Audio Options","Mute All",false)
+		break;
+		case true:
+		ini_write_real("Audio Options","Master Volume",0);
+		ini_write_real("Audio Options","Mute All",true)
+		break;
+	}
 	ini_close();
 	}
 }
