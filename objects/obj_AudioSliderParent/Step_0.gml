@@ -1,4 +1,4 @@
-if (mouse_check_button(mb_left) or gamepad_button_check_pressed(0, gp_face1)){
+if (mouse_check_button(mb_left) or gamepad_button_check(0, gp_face1)){
 	var button_x = x+sprite_width*global.volume;
 	var button_y = y;
 	var button_radius = sprite_get_width(spr_AudioSliderControl)/2;
@@ -6,7 +6,7 @@ if (mouse_check_button(mb_left) or gamepad_button_check_pressed(0, gp_face1)){
 		selected = true;	
 	}
 }
-if (!mouse_check_button(mb_left) and !gamepad_button_check_pressed(0, gp_face1)){
+if (!mouse_check_button(mb_left) and !gamepad_button_check(0, gp_face1)){
 	selected = false;
 }
 
