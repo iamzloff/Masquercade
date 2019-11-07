@@ -54,7 +54,7 @@ if room==rm_lobbies{
 	//Button Selection Check//
 	if (LobbiesInst != noone) and ((gamepad_button_check_released(0, gp_face1)) or (mouse_check_button_released(mb_left))){
 		instance_destroy();
-		room_goto(LobbiesInst.LUID);
+		script_execute(scr_RoomTransition(LobbiesInst.LUID));
 	}
 	//Button Hover Interaction//
 	if (LobbiesInst != noone) {

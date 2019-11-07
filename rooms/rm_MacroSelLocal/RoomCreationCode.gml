@@ -1,7 +1,10 @@
 global.roomcamefrom = rm_CharSelLocal
+
+//Room Transition Check (DON'T REMOVE)//
 if (global.Transitioned = true){
-	script_execute(scr_RoomTransitionEnd())
+	script_execute(scr_RoomTransitionEnd);
 }
+
 switch (obj_PML.pCount)
    {
    case 1:

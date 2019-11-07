@@ -2,11 +2,13 @@
 //Player 1//
 if ((!gamepad_is_connected(0)) and (P1Joined = true)){
 	instance_deactivate_all(true);
-	draw_text(view_wview * 0.5, view_hview * 0.5, "Player 1 Controller Disconnected")
+	instance_create_depth(960, 540, -10000, obj_ControllerDisconnected);
+	obj_ControllerDisconnected.image_index = 0;
 }
 else
 {
 	instance_activate_all();
+	instance_destroy(obj_ControllerDisconnected);
 }	
 
 ///Character Select Only///
@@ -34,7 +36,7 @@ if room==rm_CharSelLocal{
 		P1Joined = true;
 		pCount++;
 		instance_create_depth(930, 520, -1000, obj_p1HandLocal);
-		obj_p1Select.image_index = 1;
+		obj_p1Select.image_index = obj_p1Select.ColorIndex;
 	}
 	if (gamepad_button_check_pressed(0, gp_start) and (allReady = true)){
 		room_goto(rm_MacroSelLocal);	
