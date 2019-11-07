@@ -2,12 +2,12 @@
 {
     "name": "rm_encyclodexicon",
     "id": "d10b25e9-14e4-4735-82f0-6647d117a71b",
-    "creationCodeFile": "",
+    "creationCodeFile": "RoomCreationCode.gml",
     "inheritCode": false,
     "inheritCreationOrder": false,
     "inheritLayers": false,
     "instanceCreationOrderIDs": [
-
+        "6ccc640c-1912-4f52-bfb1-e2d9901a9d29"
     ],
     "IsDnD": false,
     "layers": [
@@ -25,7 +25,7 @@
             "inheritSubLayers": false,
             "inheritVisibility": false,
             "instances": [
-
+{"name": "inst_76702AC2","id": "6ccc640c-1912-4f52-bfb1-e2d9901a9d29","colour": { "Value": 4294967295 },"creationCodeFile": "","creationCodeType": "","ignore": false,"imageIndex": 0,"imageSpeed": 1,"inheritCode": false,"inheritItemSettings": false,"IsDnD": false,"m_originalParentID": "00000000-0000-0000-0000-000000000000","m_serialiseFrozen": false,"modelName": "GMRInstance","name_with_no_file_rename": "inst_76702AC2","objId": "2be56e7e-ddda-4f29-a869-e209066cdf28","properties": null,"rotation": 0,"scaleX": 1,"scaleY": 1,"mvc": "1.1","x": 160,"y": 992}
             ],
             "layers": [
 

@@ -171,25 +171,9 @@ if room==rm_options{
 	}
 	//Options Apply Button --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_optionsapply){
-	//Reset Video for Player//
-	window_set_fullscreen(global.fullscreen);
-	display_reset(global.antia, global.vsync);
 	//Save to Options ini File//
-	if (file_exists("Save.mq")) file_delete("Save.mq");
-	ini_open("Save.mq");
-	ini_write_real("Video Options","Fullscreen",global.fullscreen);
-	ini_write_real("Video Options","VSync",global.vsync);
-	ini_write_real("Video Options","AntiA",global.antia);
-	switch(global.MuteAll){
-		case false:
-		ini_write_real("Audio Options","Master Volume",global.volume);
-		ini_write_real("Audio Options","Mute All",false)
-		break;
-		case true:
-		ini_write_real("Audio Options","Master Volume",0);
-		ini_write_real("Audio Options","Mute All",true)
-		break;
-	}
-	ini_close();
+	script_execute(scr_Save);
+	//Reset Video for Player//
+	script_execute(scr_VideoReset);
 	}
 }

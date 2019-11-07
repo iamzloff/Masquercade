@@ -1,1 +1,1 @@
-//room_goto(global.roomcamefrom);
+room_goto(global.roomcamefrom);
