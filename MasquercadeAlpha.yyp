@@ -1975,6 +1975,14 @@
             }
         },
         {
+            "Key": "c918cfeb-266b-40ad-bdcc-6084cc0b12c8",
+            "Value": {
+                "id": "6f48c6fc-0e69-468d-aeb1-4a7e2be09165",
+                "resourcePath": "sprites\\spr_DebugMenu\\spr_DebugMenu.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ca7e70b2-2daa-405c-b7f3-dca372530e26",
             "Value": {
                 "id": "dfd9eada-e868-4891-ae53-099ea7425f15",
