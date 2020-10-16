@@ -1,0 +1,1 @@
+GUID = rm_MiniMania
