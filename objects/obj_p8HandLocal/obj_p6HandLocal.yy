@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_p6cc",
-    "path": "sprites/spr_p6cc/spr_p6cc.yy",
+    "name": "sp_p1cc",
+    "path": "sprites/sp_p1cc/sp_p1cc.yy",
   },
   "solid": false,
   "visible": true,
@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player 6",
-    "path": "folders/Objects/Local Play/Player Objects Local/Player 6.yy",
+    "name": "Player 1",
+    "path": "folders/Objects/Local Play/Player Objects Local/Player 1.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_p6HandLocal",

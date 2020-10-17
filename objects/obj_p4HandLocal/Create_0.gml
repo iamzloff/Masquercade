@@ -1,8 +1,10 @@
-//Image Set//
-image_speed = 0;
-image_index = 0;
-gamepad_set_axis_deadzone(1, 0.15);
-//Controller Number//
-self.CN = 3;
-self.Fill = obj_p4Fill;
-self.Char = 0;
+//Variable Link to obj_PML//
+PadNum = 3;
+Fill = obj_p4Fill.image_index
+Select = obj_p4Select.image_index;
+Locked = false;
+PMLConnect = obj_PML.P4CUID;
+PMLJoined = obj_PML.P4Joined;
+
+//Gamepad Sensitivy Deadzone//
+gamepad_set_axis_deadzone(PadNum, 0.15);

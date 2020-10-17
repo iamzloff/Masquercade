@@ -52,8 +52,8 @@ if room==rm_CharSelLocal{
 	var inst = instance_place(x,y,obj_CharColLocal)
 	//Character Selection//	
 	if (inst != noone) and (gamepad_button_check_released(PadNum, gp_face1) and (Locked = false)){
-		obj_p1Fill.image_index = inst.CUID;
-		obj_PML.P1CUID = inst.CUID;
+		Fill = inst.CUID;
+		PMLConnect = inst.CUID;
 		obj_PML.pReady += 1;
 		Locked = 1;
 	}
@@ -62,10 +62,10 @@ if room==rm_CharSelLocal{
 		{
 		case false:
 			obj_PML.pCount -= 1;
-			obj_PML.P1Joined = false;
-			obj_p1Fill.image_index = 4;
+			PMLJoined = false;
+			Fill = 4;
 			instance_destroy();
-			obj_p1Select.image_index = 0;			
+			Select = 0;			
 		break;
 		case true:
 			Locked = false;

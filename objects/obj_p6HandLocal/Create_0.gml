@@ -1,8 +1,10 @@
-//Image Set//
-image_speed = 0;
-image_index = 0;
-gamepad_set_axis_deadzone(1, 0.15);
-//Controller Number//
-self.CN = 5;
-self.Fill = obj_p6Fill;
-self.Char = 0;
+//Variable Link to obj_PML//
+PadNum = 5;
+Fill = obj_p6Fill.image_index
+Select = obj_p6Select.image_index;
+Locked = false;
+PMLConnect = obj_PML.P6CUID;
+PMLJoined = obj_PML.P6Joined;
+
+//Gamepad Sensitivy Deadzone//
+gamepad_set_axis_deadzone(PadNum, 0.15);
