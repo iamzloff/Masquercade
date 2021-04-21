@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d95e6573-379e-4c07-b8da-3b6d955ad2a2","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Collision Sprites",
     "path": "folders/Sprites/Character Select/Collision Sprites.yy",

@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"091dc46a-abf0-4fad-a620-9aa7a4689819","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Transition Curtains",
     "path": "folders/Sprites/Universal/Transition Curtains.yy",

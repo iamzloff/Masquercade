@@ -151,6 +151,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d855d244-2df1-4f26-98d7-2380fd379f48","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Character Select",
     "path": "folders/Sprites/Character Select.yy",

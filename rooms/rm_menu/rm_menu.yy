@@ -18,6 +18,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_en","path":"objects/obj_en/obj_en.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.1,"scaleY":1.1,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":585.0,"resourceVersion":"1.0","name":"inst_592CA3B1","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_op","path":"objects/obj_op/obj_op.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.1,"scaleY":1.1,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":695.0,"resourceVersion":"1.0","name":"inst_3CA80BB9","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_ex","path":"objects/obj_ex/obj_ex.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.1,"scaleY":1.1,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":805.0,"resourceVersion":"1.0","name":"inst_1BC1F9B5","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"obj_debug","path":"objects/obj_debug/obj_debug.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":640.0,"resourceVersion":"1.0","name":"inst_97EA3CE","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Menu_Buttons","tags":[],"resourceType":"GMRInstanceLayer",},
     {"assets":[
         {"spriteId":{"name":"spr_MenuFrame","path":"sprites/spr_MenuFrame/spr_MenuFrame.yy",},"headPosition":-1.0,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":960.0,"y":640.0,"resourceVersion":"1.0","name":"graphic_3CEDF039","tags":[],"resourceType":"GMRSpriteGraphic",},
@@ -35,6 +36,7 @@
     {"name":"inst_592CA3B1","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_3CA80BB9","path":"rooms/rm_menu/rm_menu.yy",},
     {"name":"inst_1BC1F9B5","path":"rooms/rm_menu/rm_menu.yy",},
+    {"name":"inst_97EA3CE","path":"rooms/rm_menu/rm_menu.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

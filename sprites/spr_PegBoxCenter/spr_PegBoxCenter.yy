@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"27d88336-c7f0-46da-bfb7-5be69b4b8296","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Mini Mania",
     "path": "folders/Sprites/Macro Games/Mini Mania.yy",

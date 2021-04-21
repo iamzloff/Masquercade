@@ -1,11 +1,5 @@
 //Pre-Set Global Variables//
-global.Transition = rm_menu;
-global.Transitioned = false;
-global.fullscreen = true;
-global.vsync = 0;
-global.antia = 0;
-global.volume = 0;
-global.MuteAll = false;
+script_execute(scr_PreSetVariables())
 
 //Save to Options ini File//
 script_execute(scr_Load);

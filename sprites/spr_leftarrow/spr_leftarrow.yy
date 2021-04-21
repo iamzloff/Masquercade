@@ -71,6 +71,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"52785562-d3a0-4066-a7ba-b3fa453b847d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Anti Aliasing",
     "path": "folders/Sprites/Options Menu/Anti Aliasing.yy",

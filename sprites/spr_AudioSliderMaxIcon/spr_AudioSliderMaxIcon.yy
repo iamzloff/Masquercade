@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"35ed68f5-5102-4087-92ef-c0cc4bb9ac5c","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Audio Controls",
     "path": "folders/Sprites/Options Menu/Audio Controls.yy",
