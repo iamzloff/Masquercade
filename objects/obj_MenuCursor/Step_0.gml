@@ -94,86 +94,29 @@ if room==rm_options{
 		}
 	//Options AA Left Arrow Interactivity -- ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_leftarrow){
-	switch(obj_aa.image_index){
-		case 0:
-		obj_aa.image_index = 3;
-		global.antia = 8;
-		break;
-		case 1:
-		obj_aa.image_index = 0;
-		global.antia = 0;
-		break;
-		case 2:
-		obj_aa.image_index = 1;
-		global.antia = 2;
-		break;
-		case 3:
-		obj_aa.image_index = 2;
-		global.antia = 4;
-		break;
-		}
+		script_execute(AntiASwitchL);
 	}
 	//Options AA Right Arrow Interactivity -- ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_rightarrow){
-	switch(obj_aa.image_index){
-		case 0:
-		obj_aa.image_index = 1;
-		global.antia = 2;
-		break;
-		case 1:
-		obj_aa.image_index = 2;
-		global.antia = 4;
-		break;
-		case 2:
-		obj_aa.image_index = 3;
-		global.antia = 8;
-		break;
-		case 3:
-		obj_aa.image_index = 0;
-		global.antia = 0;
-		break;
-		}
+		script_execute(AntiASwitchR);
 	}
 	//Options Full Screen Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_checkfullscreen){
-	if(obj_checkfullscreen.image_index = 0){
-	obj_checkfullscreen.image_index = 1;
-	global.fullscreen = true;
-	}
-	else{
-	obj_checkfullscreen.image_index = 0;
-	global.fullscreen = false;
-	}
+		script_execute(FullscreenSwitch);
 	}
 	//Options VSync Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_checkvsync){
-	if(obj_checkvsync.image_index = 0){
-	obj_checkvsync.image_index = 1;
-	global.vsync = true;
-	}
-	else{
-	obj_checkvsync.image_index = 0;
-	global.vsync = false;
-	}
+		script_execute(VSyncSwitch);
 	}
 	//Options Audio Mute All Check Box Interactivity --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_pressed(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_MuteAudio){
-	if(obj_MuteAudio.image_index = 0){
-	obj_MuteAudio.image_index = 1;
-	global.MuteAll = true;
-	audio_set_master_gain(audiogroup_default, 0)
-	}
-	else{
-	obj_MuteAudio.image_index = 0;
-	global.MuteAll = false;
-	audio_set_master_gain(audiogroup_default, global.volume)
-	}
+		script_execute(MuteSwitch);
 	}
 	//Options Apply Button --  ONLY APPLIES IN OPTIONS ROOM//
 	if (gamepad_button_check_released(0, gp_face1) or (mouse_check_button_released(mb_left))) and position_meeting(obj_MenuCursor.x, obj_MenuCursor.y, obj_optionsapply){
-	//Save to Options ini File//
-	script_execute(scr_Save);
-	//Reset Video for Player//
-	script_execute(scr_VideoReset);
+		//Save to Options ini File//
+		script_execute(Save);
+		//Reset Video for Player//
+		script_execute(ResetVideo);
 	}
 }

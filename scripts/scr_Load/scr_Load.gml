@@ -1,5 +1,0 @@
-function scr_Load() {
-
-
-
-}

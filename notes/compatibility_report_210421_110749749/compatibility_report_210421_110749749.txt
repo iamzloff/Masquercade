@@ -1,0 +1,68 @@
+Converting GML script: ${project_dir}\scripts\console_create\console_create.gml
+Converted description /// @description  console_create()
+
+Converting GML script: ${project_dir}\scripts\console_settings\console_settings.gml
+Converted description /// @description  console_settings(console,seperator,close on submit)/// @param console
+/// @param seperator
+/// @param close on submit
+
+Converting GML script: ${project_dir}\scripts\console_draw\console_draw.gml
+Converted builtin - line 16: view_xview[0] -> __view_get( e__VW.XView, 0 )
+Converted builtin - line 16: view_yview[0] -> __view_get( e__VW.YView, 0 )
+Converted description /// @description  console_draw(console,height,bg_color1,bg_color2,text_color1,text_color2,alpha)/// @param console
+/// @param height
+/// @param bg_color1
+/// @param bg_color2
+/// @param text_color1
+/// @param text_color2
+/// @param alpha
+
+Converting GML script: ${project_dir}\scripts\console_toggle\console_toggle.gml
+Converted description /// @description  console_toggle(console)/// @param console
+
+Converting GML script: ${project_dir}\scripts\console_submit\console_submit.gml
+Converted description /// @description  console_submit(console)/// @param console
+
+Converting GML script: ${project_dir}\scripts\console_cmd\console_cmd.gml
+Converted description /// @description  console_cmd(console,command)/// @param console
+/// @param command
+
+Converting GML script: ${project_dir}\scripts\console_get_cmd\console_get_cmd.gml
+Converted description /// @description  console_get_cmd(console)/// @param console
+
+Converting GML script: ${project_dir}\scripts\console_value\console_value.gml
+Converted description /// @description  console_value(console,value[n])/// @param console
+/// @param value[n]
+
+Converting GML script: ${project_dir}\scripts\console_text_open\console_text_open.gml
+Converted description /// @description  console_text_open(console,text file)/// @param console
+/// @param text file
+
+Converting GML script: ${project_dir}\scripts\console_add\console_add.gml
+Converted description /// @description  console_add(console,suggestion/help string)/// @param console
+/// @param suggestion/help string
+
+Converting GML script: ${project_dir}\scripts\console_destroy\console_destroy.gml
+Converted description /// @description  console_destroy(console)/// @param console
+
+Converting GML script: ${project_dir}\scripts\console_preset\console_preset.gml
+Converted description /// @description  console_preset(console)/// @param console
+
+Converting GML script: ${project_dir}\scripts\console_value_count\console_value_count.gml
+Converted description /// @description  console_value_count(console)/// @param console
+
+Font fnt_arial has been converted to font family Arial (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_arial\fnt_arial.gms1.png
+Added compatibility script 'action/action_end_game.gml'
+Added compatibility script 'background/background_create_from_surface.gml'
+Added compatibility script 'background/background_save.gml'
+Added compatibility script 'background/draw_background_ext.gml'
+Added compatibility script 'draw/draw_set_colour_write_enable.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'view/__view_get.gml'
+Added compatibility script 'action/__init_action.gml'
+Added compatibility script 'background/__init_background.gml'
+Added compatibility script 'view/__init_view.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'
